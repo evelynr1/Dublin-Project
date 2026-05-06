@@ -9,7 +9,7 @@
 
 h1{
     background-color: var(--primary-bg-color);
-    color: var(--primary-text-color)
+    color: var(--accent-2-color)
 }
 h2{
     background-color: var(--primary-bg-color);
@@ -17,5 +17,5 @@ h2{
 }
 p{
     background-color: var(--primary-bg-color);
-    color:var(--accent-2-color)
+    color:var(--primary-text-color)
 }
