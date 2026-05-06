@@ -1,0 +1,21 @@
+:root {
+  --primary-bg-color: #f1e9d2; /* global scope */
+  --primary-text-color: #222021;
+  --accent-1-color: #0b6623;
+  --accent-2-color: #7f461b;
+}
+
+
+
+h1{
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color)
+}
+h2{
+    background-color: var(--primary-bg-color);
+    color:var(--accent-1-color)
+}
+p{
+    background-color: var(--primary-bg-color);
+    color:var(--accent-2-color)
+}
