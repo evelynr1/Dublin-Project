@@ -1,26 +1,49 @@
 :root {
-  --primary-bg-color: #fcfcec; /* global scope */
-  --primary-text-color: #191b1c;
-  --accent-1-color: #005746;
-  --accent-2-color: #990f4b;
-
-  --dark-primary-bg-color: #1c2021;
-  --dark-primary-text-color: #fcfcec;
-  --accent-1-color: #00c29e;
-  --accent-2-color: #de94ba;
+    --parchment: #f4f1de;
+    --ink: #001219;
+    --accent1: #E3876D;
+    --accent2: #3d405b;
+    --accent3: #81b29a;
+    --accent4: #f2cc8f;
+    --links: #004966;
 }
 
+nav{
+    background-color: var(--accent3);
+}
 
+/* set text size, line height, color, background-color, */
+body{
+    background-color: var(--parchment);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.6;
+}
 
 h1{
-    background-color: var(--primary-bg-color);
-    color: var(--accent-2-color)
+    font-size: 3rem;
+    line-height: 2;
 }
-h2{
-    background-color: var(--primary-bg-color);
-    color:var(--accent-1-color)
+
+/* add transitions, animations, and prefers-reduced-motion media query */
+/* add transitions for as things load in on the page to look cool */
+/* maybe add a transition to an accordion (maybe in a Q&A section or parks list if I offer a blurb about each park) and turn it off in prefers reduced motion */
+
+
+
+/* back-to-top links */
+/* add this functionality? https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top */
+.back-to-top{
+    
 }
-p{
-    background-color: var(--primary-bg-color);
-    color:var(--primary-text-color)
+
+/* media queries */
+/* tablet size */
+@media screen and (min-width: 600px){
+    
+}
+
+/* desktop size */
+@media screen and (min-width: 1000px){
+
 }
