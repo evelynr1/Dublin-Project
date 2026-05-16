@@ -8,8 +8,19 @@
     --links: #004966;
 }
 
+*{
+    font-family: 'Atkinson-Hyperlegible', 'sans-serif';
+
+}
+
 nav{
     background-color: var(--accent3);
+
+}
+
+/* this class is for the nav bar */
+.current{
+    
 }
 
 /* set text size, line height, color, background-color, */
@@ -23,6 +34,32 @@ body{
 h1{
     font-size: 3rem;
     line-height: 2;
+    font-weight: bold;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2;
+
+}
+
+/* .information{
+    display: grid;
+    grid-template-columns: 95%;
+    justify-content: center;
+    border: 5px solid purple;
+} */
+
+/* .information section{
+    border: 2px dotted blue;
+    display: flex;
+    flex-direction: row;
+} */
+
+.information{
+    display: flex;
+    flex-direction: column;
 }
 
 /* add transitions, animations, and prefers-reduced-motion media query */
@@ -45,5 +82,8 @@ h1{
 
 /* desktop size */
 @media screen and (min-width: 1000px){
+    .information{
+        flex-direction: row;
 
+    }
 }
