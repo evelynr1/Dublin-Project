@@ -1,3 +1,4 @@
+/* from lecture 1 code */
 .skip-link{
   position: absolute;
   left: 0.75rem;
@@ -15,3 +16,31 @@
   outline: 3px solid var(--focus);
   outline-offset: 3px;
 }
+
+/* for carousel from https://codingyaar.com/bootstrap-carousel-slider-with-thumbnails/ */
+.carousel-indicators {
+    position: static;
+}
+.carousel-indicators li {
+  width: 200px;
+  height: 100%;
+  opacity: 0.8;
+}
+.carousel-indicators data-bs-target{
+  width: 200px;
+}
+.carousel-indicators data-bs-target:not(.active){
+  opacity: 0.8;
+}
+
+/* to get rid of the numbers on the ordered list of the carousel indicators */
+.carousel-indicators li{
+  list-style: none;
+}
+
+/* styling for the lists in the information section of the parks pages */
+.information ul{
+  margin: 0px 30px
+}
+
+/*  */

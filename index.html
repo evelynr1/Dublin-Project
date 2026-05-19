@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parks in Dublin</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/ai.css">
     <link rel="stylesheet" href="css/style.css">
@@ -22,16 +26,17 @@
     <nav>
         <ul>
             <li><a class="current" href="index.html">Home</a></li>
-            <li>
-                <a href="parks_list.html">Parks List</a>
+            <li><details class="nav-list">
+                <summary>Parks List</summary>
+            
                 <ul>
                     <li><a href="dubh_linn.html">Dubh Linn</li>
                     <li><a href="iveagh_gardens.html">Iveagh Gardens</a></li>
-                    <li><a href="peace_park.html">The Peace Park</a></li>
+                    <li><a class="current" href="peace_park.html">The Peace Park</a></li>
                     <li><a href="st_patricks.html">St Patrick's Park</a></li>
                     <li><a href="st_stephens.html">St Stephen's Green</a></li>
                 </ul>
-            </li>
+            </details></li>
             <li><a href="accessibility.html">Accessibility</a></li>
         </ul>
     </nav>
@@ -42,7 +47,69 @@
         </h1>
     </header>
     <main>
+        <div>
+            <h2>Welcome to my Dublin Parks List</h2>
+            <p>An incomplete list of the parks I visited while in Dublin.</p>
+        </div>
+        <div>
+            <h2>Parks List</h2>
+            <p>make sortable by accessibility (rating)? or by amenitites (tags)?</p>
+        
+            <section class="park">
+            <h3 class="h2-link">Dubh Linn</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit hendrerit varius. Nullam semper elementum arcu, quis elementum leo tincidunt sed. Donec viverra nulla ante, sit amet bibendum velit ultrices quis.
+            </p>
+            <!-- figure out how to rank these parks on accessibility (either out of 5 stars or do little icons for various types of accessibility?) -->
+            <p class="accessibility-rating">
+                Accessibility rating: _/5
+            </p>
+            <p class="location">
+                13 Christchurch Pl, Wood Quay, Dublin
+            </p>
+            </section>
+
+            <section class="park">
+            <h3 class="h2-link"><a href="iveagh_gardens.html">Iveagh Gardens</a></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit hendrerit varius. Nullam semper elementum arcu, quis elementum leo tincidunt sed. Donec viverra nulla ante, sit amet bibendum velit ultrices quis.
+            </p>
+            <p class="location">
+                123 address goes here
+            </p>
+            </section>
+
+            <section class="park">
+            <h3 class="h2-link">The Peace Park</h3>
+            <p>Peace Park is a small park with ample bench seating across the street from Christchurch Cathedral. The park sits a few feet below street level which contributes to its peaceful atmosphere by reducing the sounds of the bustling street.
+            </p>
+            <p class="location">
+                123 address goes here
+            </p>
+            </section>
+
+            <section class="park">
+            <h3 class="h2-link">St Patrick's Park</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit hendrerit varius. Nullam semper elementum arcu, quis elementum leo tincidunt sed. Donec viverra nulla ante, sit amet bibendum velit ultrices quis.
+            </p>
+            <p class="location">
+                123 address goes here
+            </p>
+            </section>
+
+            <section class="park">
+            <h3 class="h2-link">St Stephen's Green</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit hendrerit varius. Nullam semper elementum arcu, quis elementum leo tincidunt sed. Donec viverra nulla ante, sit amet bibendum velit ultrices quis.
+            </p>
+            <p class="location">
+                123 address goes here
+            </p>
+            </section>
+        </div>
+        <div>
+            <h2>Photo Gallery</h2>
+            <p>maybe put all the </p>
+        </div>
 
     </main>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
 </body>
 </html>

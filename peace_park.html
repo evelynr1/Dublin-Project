@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Peace Park</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/ai.css">
     <link rel="stylesheet" href="css/style.css">
@@ -26,14 +27,11 @@
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
-        <div class="dropdown">
-            <a href="parks_list.html">Parks List</a>
-            <!-- following three lines of code are from https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
-            <button class="dropbtn">Dropdown
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><details class="nav-list">
+                <summary>Parks List</summary>
+            
                 <ul>
                     <li><a href="dubh_linn.html">Dubh Linn</li>
                     <li><a href="iveagh_gardens.html">Iveagh Gardens</a></li>
@@ -41,37 +39,106 @@
                     <li><a href="st_patricks.html">St Patrick's Park</a></li>
                     <li><a href="st_stephens.html">St Stephen's Green</a></li>
                 </ul>
-            </div>
-        </div>
-        <a href="accessibility.html">Accessibility</a>
+            </details></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+        </ul>    
     </nav>
 
-    <main id="main">
+    <main>
         <!-- Carousel goes here -->
+         <!-- carousel code (#carouselExampleIndicators) from https://codingyaar.com/bootstrap-carousel-slider-with-thumbnails/ -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <!-- <ol class="carousel-indicators">
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
+            </ol> -->
+            
 
-        <div class="carousel">
-            <img src="images/peace_park/entrance.jpg" width="200" alt="">
-            <img src="images/peace_park/overview.jpg" width="200" alt="">
-            <img src="images/peace_park/stairs_and_ramp.jpg" width="200" alt="">
-            <img src="images/peace_park/entrance.jpg" width="200" alt="">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                <img src="images/peace_park/tree_art.jpg" class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item active">
+                <img src="images/peace_park/entrance.jpg" class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item">
+                <img src="images/peace_park/stairs_and_ramp.jpg" class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item">
+                <img src="images/peace_park/overview.jpg" class="d-block w-100" alt="">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <div class="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+                </div>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="sr-only">Next</span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0">
+                    <img src="images/peace_park/tree_art.jpg" class="d-block w-100">
+                </li>
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="active">
+                    <img src="images/peace_park/entrance.jpg" class="d-block w-100">
+                </li>
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2">
+                    <img src="images/peace_park/stairs_and_ramp.jpg" class="d-block w-100">
+                </li>
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3">
+                    <img src="images/peace_park/overview.jpg" class="d-block w-100">
+                </li>
+            </ol>
         </div>
         
         <div class="information">
-            <section class="park-info">
-            <h2>Park Information</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit hendrerit varius. Nullam semper elementum arcu, quis elementum leo tincidunt sed. Donec viverra nulla ante, sit amet bibendum velit ultrices quis. Pellentesque metus eros, tincidunt id tincidunt in, euismod a odio. Cras non fringilla leo. Pellentesque ultricies tincidunt dapibus. In bibendum sagittis luctus. Suspendisse congue est libero, vitae venenatis lacus accumsan ac.</p>
+            <section class="park-description">
+            <h2>Park Description</h2>
+            <p>Peace Park is a small park with ample bench seating across the street from Christchurch Cathedral. The park sits a few feet below street level which contributes to its peaceful atmosphere by reducing the sounds of the bustling street.</p>
             </section>
 
-            <section class="accessibility-info">
-            <h2>Accessibility Information</h2>
-            
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit hendrerit varius. Nullam semper elementum arcu, quis elementum leo tincidunt sed. Donec viverra nulla ante, sit amet bibendum velit ultrices quis. Pellentesque metus eros, tincidunt id tincidunt in, euismod a odio. Cras non fringilla leo. Pellentesque ultricies tincidunt dapibus. In bibendum sagittis luctus. Suspendisse congue est libero, vitae venenatis lacus accumsan ac.</p>
+            <section class="park-info">
+                <h2>Park Information</h2>
+                <p>Address: 13 Christchurch Pl, Wood Quay, Dublin, Ireland</p>
+                <p>Hours: 10AM to 8PM daily</p>
+                <p>How to get there: walking, bus</p>
+                <p>Amenities</p>
+                <ul>
+                    <li>Seating</li>
+                    <li>Shade</li>
+                </ul>
+                <div class="accessibility-info">
+                    <h3>
+                        Accessibility
+                    </h3>
+                    <p>This park is wheelchair accessible. There is a ramp and stairs at the park entrance. There are five steps up to the tree artwork in the back of the park to view it up close, but it is visible thorughout the whole park.</p>
+                </div>
             </section>
 
             <section class="places-nearby">
-            <h2>Places Nearby</h2>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit hendrerit varius. Nullam semper elementum arcu, quis elementum leo tincidunt sed. Donec viverra nulla ante, sit amet bibendum velit ultrices quis. Pellentesque metus eros, tincidunt id tincidunt in, euismod a odio. Cras non fringilla leo. Pellentesque ultricies tincidunt dapibus. In bibendum sagittis luctus. Suspendisse congue est libero, vitae venenatis lacus accumsan ac.</p>
+                <h2>Places Nearby</h2>
+                <ul>
+                    <li>
+                        Places to visit
+                        <ul>
+                            <li>Christchurch Cathedral</li>
+                            <li>Dublinia</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Places to eat
+                        <ul>
+                            <li>Roco Cafe</li>
+                            <li>Leo Burdocks</li>
+                        </ul>
+                    </li>
+                </ul>
             </section>
         </div>
 
@@ -82,5 +149,6 @@
     </footer>
 
     <a class="back-to-top" href="#main">Back to Top</a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
