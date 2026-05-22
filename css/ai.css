@@ -43,4 +43,49 @@
   margin: 0px 30px
 }
 
+/* mobile nav https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: var(--ink);
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  /* display: none; */
+  display: block;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: var(--parchment);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+/* .topnav a:hover {
+  background-color: var(--accent3);
+  color: var(--ink);
+} */
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: var(--accent2);
+  color: var(--parchment);
+}
+
+
 /*  */

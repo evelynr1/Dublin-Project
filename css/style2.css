@@ -1,0 +1,197 @@
+:root {
+    --parchment: #fcfcec;
+    --ink: #191b1c;
+    --accent1: #005746;
+    --accent1light: #b0be90;
+    --accent2: #990f4b;
+    --accent3: #561d5e;
+    --links: #384d48;
+}
+
+
+*{
+    font-family: 'Atkinson-Hyperlegible', 'sans-serif';
+
+}
+
+/* next 4 stylings are from my lecture 7 styling */
+nav {
+  color: var(--ink);
+  background-color: var(--accent1light);
+  margin: 0px 5px;
+  padding: 5px;
+  border: 2px solid var(--accent1);
+}
+a:hover, a:focus{
+  color: var(--accent2);
+}
+
+.skip-link{
+  background-color: var(--accent1light);
+  color: var(--ink);
+}
+
+.skip-link:hover, .skip-link:focus{
+  color: var(--ink);
+}
+
+/* nav{
+    width: 100%;
+    margin: 0px
+} */
+
+.spaceholder{
+    width: 200px;
+    height: 1000px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* nav ul li ul{
+    display: none;
+} */
+
+nav ul li ::marker{
+    display: none;
+}
+
+nav details ul{
+    display: flex;
+    flex-direction: column;
+}
+
+/* this class is for the nav bar */
+.current{
+
+}
+
+/* set text size, line height, color, background-color, */
+body{
+    background-color: var(--parchment);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1{
+    font-size: 3rem;
+    line-height: 2;
+    font-weight: bold;
+    /* padding: 0px 20px 0px; */
+    /* margin: auto; */
+}
+
+h2{
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2;
+
+}
+
+/* to style hidden links for the parks list page, so if you click on the park name instead of the "more" button, it will still work */
+.h2-link{
+
+}
+
+/* .information{
+    display: grid;
+    grid-template-columns: 95%;
+    justify-content: center;
+    border: 5px solid purple;
+} */
+
+/* .information section{
+    border: 2px dotted blue;
+    display: flex;
+    flex-direction: row;
+} */
+
+.information{
+    display: grid;
+    grid-template-columns: 90%;
+}
+
+/* add transitions, animations, and prefers-reduced-motion media query */
+/* add transitions for as things load in on the page to look cool */
+/* maybe add a transition to an accordion (maybe in a Q&A section or parks list if I offer a blurb about each park) and turn it off in prefers reduced motion */
+
+
+
+/* back-to-top links */
+/* add this functionality? https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top */
+.back-to-top{
+    
+}
+
+/* carousel */
+/* .carouselExampleIndicators {
+    display: grid;
+    grid-template-columns: 80%;
+    margin: 30px;
+
+} */
+
+.carousel {
+    width: 90%;
+    margin: auto;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  color: var(--parchment);
+  background-color: var(--ink);
+}
+
+.prev{
+    background-color: var(--accent1);
+}
+
+.accessibility-info p{
+    margin: 0px 0px 0px 30px;
+}
+
+
+/* back to top button styling */
+.back-to-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* list-item styling - do custom markers! */
+
+/* animation can be a parallax image - scroll and the background image doesn't move */
+
+/* media queries */
+/* tablet size */
+@media screen and (min-width: 600px){
+    /* Inspired by https://www.youtube.com/watch?v=JYfiaSKeYhE */
+    /* to make the grid for desktop for the park pages */
+    .information{
+        display: grid;
+        grid-template-columns: 250px 250px;
+        grid-template-rows: 200px 200px;
+        grid-template-areas: 
+        "box-1 box-2"
+        "box-1 box-3";
+        margin: 20px 0px 0px 0px;
+    }
+
+    nav ul li ul{
+        display: inline;
+    }
+}
+
+/* desktop size */
+@media screen and (min-width: 1000px){
+    .information{
+        grid-template-columns: 400px 400px;
+        grid-template-rows: 200px 200px;
+
+    }
+}

@@ -1,0 +1,167 @@
+/* :root {
+    --parchment: #dfe3ec;
+    --ink: #37465c;
+    --accent0: #dfe9d8;
+    --accent1: #d5e1cc;
+    --accent2: #833960;
+    --accent3: #005746;
+    --accent4: #561d5e;
+    --links: #384d48;
+} */
+
+/* :root {
+    --parchment: #dedede;
+    --ink: #37465c;
+    --accent1: #5A3858;
+    --accent2: #4E4131;
+    --accent3: #304A31;
+} */
+
+:root {
+    --parchment: #fcfaf8;
+    --ink: #4a5a4e;
+    --accent1: #295c70;
+    --accent2: #713e93;
+    --accent3: #F7F2ED;
+    /* --links: #384d48; */
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--parchment);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.6;
+}
+nav{
+    background-color: var(--ink);
+    color: var(--parchment);
+}
+header{
+    background-color: var(--parchment);
+    color: var(--accent2);
+    display: grid;
+
+}
+footer{
+    background-color: var(--parchment);
+    color: var(--ink);
+}
+
+.information{
+    display: grid;
+    grid-template-columns: 90%;
+}
+
+.information section .section-content{
+    width: 90%;
+    border-left: 3px solid var(--accent2);
+    margin: 10px;
+    padding: 5px;
+}
+
+
+/* set text size, line height, color, background-color, */
+h1{
+    font-size: 3rem;
+    line-height: 2;
+    font-weight: bold;
+    /* padding: 0px 20px 0px; */
+    /* margin: auto; */
+    text-align: center;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2;
+
+}
+
+.information{
+    display: grid;
+    grid-template-columns: 90%;
+}
+
+.carousel {
+    width: 90%;
+    margin: auto;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  color: var(--parchment);
+  background-color: var(--ink);
+}
+
+.prev{
+    background-color: var(--accent1);
+}
+
+.topnav {
+  border-bottom: 2px solid var(--ink);
+}
+
+.accessibility-info p{
+    margin: 0px 0px 0px 30px;
+}
+
+
+/* back to top button styling */
+.back-to-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* list-item styling - do custom markers! */
+
+/* animation can be a parallax image - scroll and the background image doesn't move */
+
+/* media queries */
+/* tablet size */
+@media screen and (min-width: 600px){
+    /* Inspired by https://www.youtube.com/watch?v=JYfiaSKeYhE */
+    /* to make the grid for desktop for the park pages */
+    .information{
+        display: grid;
+        grid-template-columns: 250px 250px;
+        grid-template-rows: 200px 200px;
+        grid-template-areas: 
+        "box-1 box-2"
+        "box-1 box-3";
+        margin: 20px 0px 0px 0px;
+    }
+
+    /* navbar for tablet and desktop breakpoints */
+
+}
+
+/* desktop size */
+@media screen and (min-width: 1000px){
+    .information{
+        grid-template-columns: 400px 400px;
+        grid-template-rows: 200px 200px;
+
+    }
+}
+
+
+/* to go with the W3Schools code for the mobile nav, a class for open hamburger menu */
+.open{
+    /* display: block; */
+    display: none;
+}
+
+#home{
+    background-color: var(--accent1);
+}
+
+/* for when a link in the nav is hovered on or in focus */
+.activeNavLink{
+    /* border: 5px solid var(--accent1); */
+    background-color: var(--parchment);
+    color: var(--ink);
+}
