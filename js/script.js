@@ -1,9 +1,9 @@
 //mobile nav hamburger menu
-document.querySelector("#hamburger").addEventListener("click", function () {
-  // this.style.display = "none";
-  document.querySelector(".topnav #myLinks").classList.toggle("open");
-  console.log("hamburger clicked")
-  });
+// document.querySelector("#hamburger").addEventListener("click", function () {
+//   // this.style.display = "none";
+//   document.querySelector(".topnav #myLinks").classList.toggle("open");
+//   console.log("hamburger clicked")
+//   });
 
 // const mobileNav = document.querySelector("#hamburger");
 // // it works to turn the correct area yellow, but not to set it to display:none

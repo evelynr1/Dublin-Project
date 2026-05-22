@@ -18,6 +18,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -42,29 +44,26 @@
     </nav> -->
 
     <!-- next section = from https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
-    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <!-- Top Navigation Menu -->
-    <div class="topnav">
-    <a href="index.html" class="navLink active">Parks in Dublin</a>
-    <!-- Navigation links (hidden by default) -->
-    <div id="myLinks">
-        <a class="navLink" href="parks_list.html">Parks List</a>
-        <a class="navLink" href="about.html">About</a>
-        <a class="navLink" href="site_settings.html">Site Settings</a>
-    </div>
-    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-    
-    <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-    </a> -->
+    <nav class="topnav">
+        <a href="index.html" class="navLink active">Parks in Dublin</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+            <a class="navLink" href="parks_list.html">Parks List</a>
+            <a class="navLink" href="about.html">About</a>
+            <a class="navLink" href="site_settings.html">Site Settings</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        
+        <a href="javascript:void(0);" class="icon" onclick="mobileNavMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
 
-    <a href="javascript:void(0);" class="icon" id="hamburger">
-        <i class="fa fa-bars"></i>
-    </a>
+        <!-- <a href="javascript:void(0);" class="icon" id="hamburger">
+            <i class="fa fa-bars"></i>
+        </a> -->
 
-    </div>
+    </nav>
 
     <header>
         <h1>
@@ -73,8 +72,18 @@
     </header>
     <main>
         <div>
-            <h2>Welcome to my Dublin Parks List</h2>
-            <p>An incomplete list of the parks I visited while in Dublin.</p>
+            <h2>Céad míle fáilte!</h2>
+            <p>One hundred thousand welcomes! My name is Evelyn Russell and I have spent three weeks studying web accessibility in Dublin, Ireland. I have spent my time exploring the city, along with a few other adventures including the cliff walk in Howth and a bus tour to Wickow, Glendalough, and Kilkenny.</p>
+            <p>Through my time living and learning here, I have focused on accessibility in both physical and digital spaces. Specifically, I have wandered through many Dublin parks looking for how the physical design of the spaces enables and invites interaction from the public. Which parks have the most comfortable benches, the most beautiful views, the coolest water features? And also which parks are accessible for wheelchair users? Which have clear signage? Which parks have playgrounds or spaces for those who need to move their bodies in order to relax?</p>
+            <p>This site is the incomplete culmination of my observations. Of all of the parks I visited, I picked five to spotlight.</p>
+            <ul id="five-parks">
+                <li>Dubh Linn Gardens</li>
+                <li>Iveagh Gardens</li>
+                <li>Peace Park</li>
+                <li>St Patrick's Park</li>
+                <li>St Stephen's Greens</li>
+            </ul>
+            <p>These five are centrally located in Dublin which means they are accessible by public transit. Other honorable mentions include Phoenix Park (the biggest park in Dublin) and the Dublin Zoo. While the Dublin Zoo is not a park in the traditional sense, it is a fantastic place to spend an afternoon learning about the conservation work being done in Dublin in collaboration with zoos around the world.</p>
         </div>
         <div>
             <h2>Parks List</h2>
@@ -93,7 +102,7 @@
 
             <p>make sortable by accessibility (rating)? or by amenitites (tags)?</p>
         
-            
+        </div>    
         <div>
             <h2>Photo Gallery</h2>
             <p>maybe put all the images and then can sort by something? or link to the park pages?</p>
@@ -101,9 +110,20 @@
             <p>use lightbox here</p>
         </div>
 
+        <div>
+            <p>Testing area</p>
+            <h3 class="h2-link"><a href="iveagh_gardens.html">Iveagh Gardens</a></h3>
+            <p class="filler">...</p>
+        </div>
+
     </main>
+
+    <footer>
+        <p>&#169; 2026 Evelyn Russell. All Rights Reserved.</p>
+    </footer>
+
     <a class="back-to-top" href="#main">Back to Top</a>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src = "js/ai.js"></script>
     <script src = "js/script.js"></script>
 </body>

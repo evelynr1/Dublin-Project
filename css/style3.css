@@ -22,7 +22,7 @@
     --ink: #4a5a4e;
     --accent1: #295c70;
     --accent2: #713e93;
-    --accent3: #F7F2ED;
+    --accent3: #FCFBFD;
     /* --links: #384d48; */
 }
 
@@ -36,24 +36,40 @@ body{
     font-size: 16px;
     line-height: 1.6;
 }
+
 nav{
     background-color: var(--ink);
     color: var(--parchment);
+    /* font-weight: 700; */
+    font-family: "Signika", sans-serif;
 }
+
 header{
     background-color: var(--parchment);
     color: var(--accent2);
     display: grid;
+}
 
+main{
+    margin: 10px;
 }
+
 footer{
-    background-color: var(--parchment);
-    color: var(--ink);
+    background-color: var(--ink);
+    color: var(--parchment);
+    padding: 20px 0px;
+    margin: auto;
+    text-align: center;
 }
+
 
 .information{
     display: grid;
     grid-template-columns: 90%;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+
 }
 
 .information section .section-content{
@@ -78,12 +94,12 @@ h2{
     font-weight: bold;
     font-size: 1.5rem;
     line-height: 2;
-
+    font-family: "Signika", sans-serif;
 }
 
-.information{
-    display: grid;
-    grid-template-columns: 90%;
+a:hover, a:focus{
+  color: var(--accent2);
+  text-decoration: underline;
 }
 
 .carousel {
@@ -104,9 +120,9 @@ h2{
   border-bottom: 2px solid var(--ink);
 }
 
-.accessibility-info p{
+/* .accessibility-info p{
     margin: 0px 0px 0px 30px;
-}
+} */
 
 
 /* back to top button styling */
@@ -119,15 +135,15 @@ h2{
 /* skip to main content button styling */
 .skip-link {
 position: absolute;
-left: 0.75rem;
-top: 0.75rem;
+/* left: 0.75rem; */
+top: -100px;
 padding: 0.6rem 0.8rem;
 background: var(--accent2);
 border: 2px solid var(--accent1);
 border-radius: 10px;
 color: var(--parchment);
 text-decoration: none;
-transform: translateY(-200%);
+/* transform: translateY(-200%); */
 background-color: var(--accent1light);
 color: var(--ink);
 }
@@ -136,22 +152,79 @@ color: var(--ink);
 
 /* animation can be a parallax image - scroll and the background image doesn't move */
 
+
+
+.filler{
+    margin: 100px;
+}
+
+.info-type{
+    font-weight: 700;
+}
+
+.places-nearby{
+    border: 3px solid var(--ink);
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.places-nearby{
+    text-align: center;
+}
+
+/* .park-description p{
+    border-left: 5px solid blue;
+} */
+
+
+
+/* style .parks-list to be tiles made up of .parks */
+/* go for cute and fun and clickable like the non-clickable tiles on the library page of Colleen's site */
+
+
+
+
 /* media queries */
 /* tablet size */
 @media screen and (min-width: 600px){
     /* Inspired by https://www.youtube.com/watch?v=JYfiaSKeYhE */
     /* to make the grid for desktop for the park pages */
     .information{
-        display: grid;
-        grid-template-columns: 250px 250px;
-        grid-template-rows: 200px 200px;
-        grid-template-areas: 
-        "box-1 box-2"
-        "box-1 box-3";
-        margin: 20px 0px 0px 0px;
+        grid-template-columns: 55% 40%;
+    }
+    
+    .places-nearby{
+        grid-column: 2;
+        grid-row: 1;
     }
 
+    .park-info{
+        grid-column: 1/-1;
+    }
+
+    /* .park-info{
+    display: grid;
+    grid-template-columns: 30% 60%; */
+}
+
+
     /* navbar for tablet and desktop breakpoints */
+
+    /* skip to main content */ 
+    /* move back to desktop */
+    .skip-link:focus, .skip-link:hover{
+        /* transform: translateY(0); */
+        top: 10px;
+        left: 25%;
+        outline: 3px solid var(--focus);
+        outline-offset: 3px;
+        width: 50%;
+        z-index:100;
+        background: black;
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        }
 
 }
 
@@ -160,8 +233,10 @@ color: var(--ink);
     .information{
         grid-template-columns: 400px 400px;
         grid-template-rows: 200px 200px;
-
+        
     }
+
+    
 }
 
 

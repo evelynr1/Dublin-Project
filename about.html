@@ -27,27 +27,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <a class="skip-link" href="#main">Skip to Main Content</a>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><details class="nav-list">
-                <summary>Parks List</summary>
-            
-                <ul>
-                    <li><a href="dubh_linn.html">Dubh Linn</a></li>
-                    <li><a href="iveagh_gardens.html">Iveagh Gardens</a></li>
-                    <li><a href="peace_park.html">The Peace Park</a></li>
-                    <li><a href="st_patricks.html">St Patrick's Park</a></li>
-                    <li><a href="st_stephens.html">St Stephen's Green</a></li>
-                </ul>
-            </details></li>
-            <li><a class="current" href="about.html">About</a></li>
-        </ul>
+    <!-- nav = from https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
+    <!-- Top Navigation Menu -->
+    <nav class="topnav">
+        <a href="index.html" class="navLink active">Parks in Dublin</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+            <a class="navLink" href="parks_list.html">Parks List</a>
+            <a class="navLink" href="about.html">About</a>
+            <a class="navLink" href="site_settings.html">Site Settings</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        
+        <a href="javascript:void(0);" class="icon" onclick="mobileNavMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <!-- <a href="javascript:void(0);" class="icon" id="hamburger">
+            <i class="fa fa-bars"></i>
+        </a> -->
     </nav>
 
 
@@ -58,14 +63,30 @@
     </header>
     <main>
         <div class="intro">
-            <h2></h2>
-            <p></p>
+            <h2>Céad míle fáilte!</h2>
+            <p>Talk more about why I'm here. How I chose parks, and how I got interested in accessibility</p>
+        </div>
+        <div>
+            <h2>My Favorites</h2>
+            <p>in polaroid photo style gallery form, ex. Favorite street art: mural of the St. Stephens Park ducks at Michael Mallin Park</p>
+            <h3>Experiences</h3>
+            <p>Museum: The Little Museum of Dublin</p>
+            <p>Tour: Wicklow, Glendalough, Kilkenny bus tour</p>
+            <p>Treat: Turskich Delights from Ella's Heaven Cafe & Bakery</p>
+
+            
+            <p>Park</p>
+            <p>Cafe</p>
+            <p>Restaurant</p>
+
+            <p>Photos I took: see the photo gallery</p>
         </div>
         <div class="gallery">
             <h2>Photo Gallery</h2>
+            <p>introduce the photo gallery as a highlight reel of my time in Ireland focusing mainly food, nature, and fun</p>
             <p>maybe put all the images and then can sort by something? or link to the park pages?</p>
             <p>alternatively, put an image gallery on the About page highlighting my general trip highlights</p>
-            <p>use lightbox here</p>
+            <p>use lightbox here!</p>
         </div>
 
         <section>
@@ -75,9 +96,7 @@
     </main>
 
     <footer>
-        <h2>Home</h2>
-        <h2>Parks List</h2>
-        <h2>About</h2>
+        <p>&#169; 2026 Evelyn Russell. All Rights Reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

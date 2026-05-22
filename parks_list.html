@@ -18,27 +18,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <a class="skip-link" href="#main">Skip to Main Content</a>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><details class="nav-list">
-                <summary><a class="current" href="parks_list.html">Parks List</a></summary>
-            
-                <ul>
-                    <li><a href="dubh_linn.html">Dubh Linn</a></li>
-                    <li><a href="iveagh_gardens.html">Iveagh Gardens</a></li>
-                    <li><a class="current" href="peace_park.html">The Peace Park</a></li>
-                    <li><a href="st_patricks.html">St Patrick's Park</a></li>
-                    <li><a href="st_stephens.html">St Stephen's Green</a></li>
-                </ul>
-            </details></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
+    <!-- next section = from https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
+    <!-- Top Navigation Menu -->
+    <nav class="topnav">
+        <a href="index.html" class="navLink active">Parks in Dublin</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+            <a class="navLink" href="parks_list.html">Parks List</a>
+            <a class="navLink" href="about.html">About</a>
+            <a class="navLink" href="site_settings.html">Site Settings</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        
+        <a href="javascript:void(0);" class="icon" onclick="mobileNavMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <!-- <a href="javascript:void(0);" class="icon" id="hamburger">
+            <i class="fa fa-bars"></i>
+        </a> -->
+
     </nav>
 
     <header>
@@ -47,7 +53,7 @@
         </h1>
     </header>
     <main>
-        <div>
+        <div id="parks-list">
             <h2>Parks List</h2>
             <!-- <p>The complete list of possible amenitites I have checked for at each park is</p>
             <ul>
@@ -65,56 +71,45 @@
             <p>make sortable by accessibility (rating)? or by amenitites (tags)?</p>
         
             <section class="park">
-            <h3 class="h2-link">Dubh Linn</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit hendrerit varius. Nullam semper elementum arcu, quis elementum leo tincidunt sed. Donec viverra nulla ante, sit amet bibendum velit ultrices quis.
-            </p>
-            <!-- figure out how to rank these parks on accessibility (either out of 5 stars or do little icons for various types of accessibility?) -->
-            <p class="accessibility-rating">
-                Accessibility rating: _/5
-            </p>
-            <p class="location">
-                13 Christchurch Pl, Wood Quay, Dublin
+            <h3 class="h2-link"><a href="dubh_linn.html">Dubh Linn</a></h3>
+            <p>Perfect for history lovers, Dubh Linn Gardens is located behind the Dublin Castle and features two museums, the Garda Memorial Garden, and a circular lawns decorated with patterns representing sea serpents. 
             </p>
             </section>
 
             <section class="park">
             <h3 class="h2-link"><a href="iveagh_gardens.html">Iveagh Gardens</a></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit hendrerit varius. Nullam semper elementum arcu, quis elementum leo tincidunt sed. Donec viverra nulla ante, sit amet bibendum velit ultrices quis.
-            </p>
-            <p class="location">
-                123 address goes here
+            <p>Featuring a yew maze, rose garden, and even a waterfall, Iveagh Gardens is the perfect getaway in the hustle of the city center. The archery field which is sunk down below street level, is a great place to take in the sun while serenely lounging in the grass or chatting with friends. 
             </p>
             </section>
 
             <section class="park">
-            <h3 class="h2-link">The Peace Park</h3>
+            <h3 class="h2-link"><a href="peace_park.html">The Peace Park</a></h3>
             <p>Peace Park is a small park with ample bench seating across the street from Christchurch Cathedral. The park sits a few feet below street level which contributes to its peaceful atmosphere by reducing the sounds of the bustling street.
-            </p>
-            <p class="location">
-                123 address goes here
             </p>
             </section>
 
             <section class="park">
             <h3 class="h2-link">St Patrick's Park</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit hendrerit varius. Nullam semper elementum arcu, quis elementum leo tincidunt sed. Donec viverra nulla ante, sit amet bibendum velit ultrices quis.
-            </p>
-            <p class="location">
-                123 address goes here
+            <p>With a weekly Sunday market, it's very own cafe, and the occassional tolling of church bells, this park is a great place to people watch. Or dog watch if you prefer, as there are frequently dog owners playing fetch in the grassy center of the park.
             </p>
             </section>
 
             <section class="park">
             <h3 class="h2-link">St Stephen's Green</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit hendrerit varius. Nullam semper elementum arcu, quis elementum leo tincidunt sed. Donec viverra nulla ante, sit amet bibendum velit ultrices quis.
-            </p>
-            <p class="location">
-                123 address goes here
+            <p>Comprised of 22 acres of greenspace in Dublin city center, St. Stephen's Green is the largest of the city's Georgian Garden Squares. The park also features 21 historical placards to read as you stroll through. Additionally, it has a playground, ample seating, and open green spaces making it perfect for a stroll, picnic, or playdate!
             </p>
             </section>
         </div>
 
     </main>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
+    <footer>
+        <p>&#169; 2026 Evelyn Russell. All Rights Reserved.</p>
+    </footer>
+
+    <a class="back-to-top" href="#main">Back to Top</a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src = "js/ai.js"></script>
+    <script src = "js/script.js"></script>
 </body>
 </html>

@@ -13,28 +13,29 @@
     <!-- Atkinson Hyperlegible -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <a class="skip-link" href="#main">Skip to Main Content</a>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><details class="nav-list">
-                <summary>Parks List</summary>
-            
-                <ul>
-                    <li><a href="dubh_linn.html">Dubh Linn</a></li>
-                    <li><a class="current" href="iveagh_gardens.html">Iveagh Gardens</a></li>
-                    <li><a href="peace_park.html">The Peace Park</a></li>
-                    <li><a href="st_patricks.html">St Patrick's Park</a></li>
-                    <li><a href="st_stephens.html">St Stephen's Green</a></li>
-                </ul>
-            </details></li>
-            <li><a href="about.html">About</a></li>
-        </ul>    
+    <!-- nav = from https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
+    <!-- Top Navigation Menu -->
+    <nav class="topnav">
+        <a href="index.html" class="navLink active">Parks in Dublin</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+            <a class="navLink" href="parks_list.html">Parks List</a>
+            <a class="navLink" href="about.html">About</a>
+            <a class="navLink" href="site_settings.html">Site Settings</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="mobileNavMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
     </nav>
 
     <header>
@@ -154,16 +155,13 @@
         <div class="information">
             <section class="park-description">
             <h2>Park Description</h2>
-            <p>Peac</p>
+            <p>Featuring a yew maze, rose garden, and even a waterfall, Iveagh Gardens is the perfect getaway in the hustle of the city center. The archery field which is sunk down below street level, is a great place to take in the sun while serenely lounging in the grass or chatting with friends.</p>
             </section>
 
-            <section class="park-info">
+            <!-- <section class="park-info">
                 <h2>Park Information</h2>
-                <p>Address: St Stephen's Green, Park, Dublin 2, D02 HX65, Ireland</p>
-                <p>Hours: 8AM to 7:30PMM Monday through Saturday. 10AM to 7:30PM on Sunday.</p>
-                <p>Website: iveaghgardens.ie </p>
-                <p>How to get there: walking, bus, tram</p>
-                <p>Amenities</p>
+                work on adding dt and dd tags
+                <p><span class="info-type">Amenities</span></p>
                 <ul>
                     <li>Gardens</li>
                     <li>Green spaces</li>
@@ -174,11 +172,36 @@
                     <li>Waste disposal</li>
                     <li>Water features</li>
                 </ul>
-                <div class="accessibility-info">
-                    <h3>
-                        Accessibility
-                    </h3>
-                    <p>This park is wheelchair accessible. </p>
+                <p><span class="info-type">Accessibility:</span> This park is wheelchair accessible.</p>
+                <p><span class="info-type">Address:</span> St Stephen's Green, Park, Dublin 2, D02 HX65, Ireland</p>
+                <p><span class="info-type">Hours:</span> 8AM to 7:30PM Monday through Saturday. 10AM to 7:30PM on Sunday.</p>
+                <p><span class="info-type">Website:</span> <a href="iveaghgardens.ie">Iveagh Gardens | Experience a sense of wonder in Dublin’s ‘secret garden’</a> </p>
+                
+            </section> -->
+
+            <section class="park-info">
+                <h2>Park Information</h2>
+                <div class="park-info-specifics">
+                <p><span class="info-type">Hours:</span> 8AM to 7:30PM Monday through Saturday. 10AM to 7:30PM on Sunday.</p>
+                <!-- add a green/yellow/red indicator for open/closingsoon/closed -->
+                <p><span class="info-type">Address:</span> St Stephen's Green, Park, Dublin 2, D02 HX65, Ireland</p>
+                <p><span class="info-type">Website:</span> <a href="iveaghgardens.ie">Iveagh Gardens | Experience a sense of wonder in Dublin’s ‘secret garden’</a> </p>
+                <p><span class="info-type">Accessibility:</span> This park is wheelchair accessible.</p>
+                </div>
+                
+            </section class="park-info">
+                <h2><span class="info-type" id="amenities">Amenities:</span></h2>
+                <div class="park-info-specifics">
+                <ul>
+                    <li>Gardens</li>
+                    <li>Green spaces</li>
+                    <li>Playground</li>
+                    <li>Seating</li>
+                    <li>Shaded areas</li>
+                    <li>Walking paths</li>
+                    <li>Waste disposal</li>
+                    <li>Water features</li>
+                </ul>
                 </div>
             </section>
 
@@ -206,10 +229,12 @@
     </main>
 
     <footer>
-
+        <p>&#169; 2026 Evelyn Russell. All Rights Reserved.</p>
     </footer>
 
     <a class="back-to-top" href="#main">Back to Top</a>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src = "js/ai.js"></script>
+    <script src = "js/script.js"></script>
 </body>
 </html>
