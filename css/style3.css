@@ -116,6 +116,22 @@ h2{
     right: 20px;
 }
 
+/* skip to main content button styling */
+.skip-link {
+position: absolute;
+left: 0.75rem;
+top: 0.75rem;
+padding: 0.6rem 0.8rem;
+background: var(--accent2);
+border: 2px solid var(--accent1);
+border-radius: 10px;
+color: var(--parchment);
+text-decoration: none;
+transform: translateY(-200%);
+background-color: var(--accent1light);
+color: var(--ink);
+}
+
 /* list-item styling - do custom markers! */
 
 /* animation can be a parallax image - scroll and the background image doesn't move */
@@ -151,8 +167,8 @@ h2{
 
 /* to go with the W3Schools code for the mobile nav, a class for open hamburger menu */
 .open{
-    /* display: block; */
-    display: none;
+    display: block;
+    /* display: none; */
 }
 
 #home{

@@ -4,18 +4,26 @@
   left: 0.75rem;
   top: 0.75rem;
   padding: 0.6rem 0.8rem;
-  background: var(--accent2);
+  background-color: var(--accent2);
   border: 2px solid var(--accent3);
   border-radius: 10px;
   color: var(--parchment);
   text-decoration: none;
   transform: translateY(-200%);
 }
-.skip-link:focus{
+
+.skip-link:focus, .skip-link:hover{
   transform: translateY(0);
   outline: 3px solid var(--focus);
   outline-offset: 3px;
 }
+
+a:hover, a:focus{
+  color: var(--accent2);
+  text-decoration: underline;
+}
+
+
 
 /* for carousel from https://codingyaar.com/bootstrap-carousel-slider-with-thumbnails/ */
 .carousel-indicators {
@@ -43,6 +51,7 @@
   margin: 0px 30px
 }
 
+
 /* mobile nav https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
 /* Style the navigation menu */
 .topnav {
@@ -53,8 +62,8 @@
 
 /* Hide the links inside the navigation menu (except for logo/home) */
 .topnav #myLinks {
-  /* display: none; */
-  display: block;
+  display: none;
+  /* display: block; */
 }
 
 /* Style navigation menu links */
@@ -68,7 +77,8 @@
 
 /* Style the hamburger menu */
 .topnav a.icon {
-  background: black;
+  background: var(--ink);
+  color: var(--parchment);
   display: block;
   position: absolute;
   right: 0;
@@ -76,16 +86,18 @@
 }
 
 /* Add a grey background color on mouse-over */
-/* .topnav a:hover {
+.topnav a:hover {
   background-color: var(--accent3);
   color: var(--ink);
-} */
+}
 
 /* Style the active link (or home/logo) */
 .active {
   background-color: var(--accent2);
   color: var(--parchment);
 }
+
+
 
 
 /*  */
