@@ -22,20 +22,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Material Design upward Arrow Icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
 <body>
     <a class="skip-link" href="#main">Skip to Main Content</a>
 
-    <!-- nav = from https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
+    <!-- next section = from https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
     <!-- Top Navigation Menu -->
     <nav class="topnav">
         <a href="index.html" class="navLink active">Parks in Dublin</a>
         <!-- Navigation links (hidden by default) -->
         <div id="myLinks">
-            <a class="navLink" href="parks_list.html">Parks List</a>
-            <a class="navLink" href="about.html">About</a>
+            <a class="navLink" id="parks-list-nav-link" href="parks_list.html">Parks List</a>
+            <!-- <a class="navLink" href="about.html">About</a> -->
+            <ul>
+                <li><a href="dubh_linn.html">Dubh Linn</a></li>
+                <li><a href="iveagh_gardens.html">Iveagh Gardens</a></li>
+                <li><a href="peace_park.html">The Peace Park</a></li>
+                <li><a href="st_patricks.html">St Patrick's Park</a></li>
+                <li><a href="st_stephens.html">St Stephen's Green</a></li>
+            </ul>
             <a class="navLink" href="site_settings.html">Site Settings</a>
         </div>
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
