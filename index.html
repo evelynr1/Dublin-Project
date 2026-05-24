@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parks in Dublin</title>
 
+    <!-- lightbox 2 -->
+    <link href="dist/css/lightbox.css" rel="stylesheet">
+
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -20,6 +23,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Material Design upward Arrow Icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -49,20 +54,21 @@
         <a href="index.html" class="navLink active">Parks in Dublin</a>
         <!-- Navigation links (hidden by default) -->
         <div id="myLinks">
-            <a class="navLink" href="parks_list.html">Parks List</a>
-            <a class="navLink" href="about.html">About</a>
+            <a class="navLink" id="parks-list-nav-link" href="parks_list.html">Parks List</a>
+            <!-- <a class="navLink" href="about.html">About</a> -->
+            <ul>
+                <li><a href="dubh_linn.html">Dubh Linn</a></li>
+                <li><a href="iveagh_gardens.html">Iveagh Gardens</a></li>
+                <li><a href="peace_park.html">The Peace Park</a></li>
+                <li><a href="st_patricks.html">St Patrick's Park</a></li>
+                <li><a href="st_stephens.html">St Stephen's Green</a></li>
+            </ul>
             <a class="navLink" href="site_settings.html">Site Settings</a>
         </div>
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-        
         <a href="javascript:void(0);" class="icon" onclick="mobileNavMenu()">
             <i class="fa fa-bars"></i>
         </a>
-
-        <!-- <a href="javascript:void(0);" class="icon" id="hamburger">
-            <i class="fa fa-bars"></i>
-        </a> -->
-
     </nav>
 
     <header>
@@ -71,23 +77,24 @@
         </h1>
     </header>
     <main>
-        <div>
+        <section id="welcome">
             <h2>Céad míle fáilte!</h2>
-            <p>One hundred thousand welcomes! My name is Evelyn Russell and I have spent three weeks studying web accessibility in Dublin, Ireland. I have spent my time exploring the city, along with a few other adventures including the cliff walk in Howth and a bus tour to Wickow, Glendalough, and Kilkenny.</p>
-            <p>Through my time living and learning here, I have focused on accessibility in both physical and digital spaces. Specifically, I have wandered through many Dublin parks looking for how the physical design of the spaces enables and invites interaction from the public. Which parks have the most comfortable benches, the most beautiful views, the coolest water features? And also which parks are accessible for wheelchair users? Which have clear signage? Which parks have playgrounds or spaces for those who need to move their bodies in order to relax?</p>
-            <p>This site is the incomplete culmination of my observations. Of all of the parks I visited, I picked five to spotlight.</p>
-            <ul id="five-parks">
-                <li>Dubh Linn Gardens</li>
-                <li>Iveagh Gardens</li>
-                <li>Peace Park</li>
-                <li>St Patrick's Park</li>
-                <li>St Stephen's Greens</li>
-            </ul>
-            <p>These five are centrally located in Dublin which means they are accessible by public transit. Other honorable mentions include Phoenix Park (the biggest park in Dublin) and the Dublin Zoo. While the Dublin Zoo is not a park in the traditional sense, it is a fantastic place to spend an afternoon learning about the conservation work being done in Dublin in collaboration with zoos around the world.</p>
-        </div>
-        <div>
-            <h2>Parks List</h2>
-            <p>The complete list of possible amenitites I have checked for at each park is</p>
+            <p>One hundred thousand welcomes! My name is Evelyn Russell and I have spent three weeks studying web accessibility in Dublin, Ireland. Much of my time here has been spent enjoying the numerous parks and greenspaces the city has to offer.</p>
+            <p>Of all of the parks I visited, I have picked five to spotlight!</p>
+            <div id="five-parks">
+                <ul>
+                    <li>Dubh Linn Gardens</li>
+                    <li>Iveagh Gardens</li>
+                    <li>Peace Park</li>
+                    <li>St Patrick's Park</li>
+                    <li>St Stephen's Greens</li>
+                </ul>
+            </div>
+            <p>These five are centrally located in Dublin which means they are accessible by public transit. Other honorable mentions include Phoenix Park (the biggest park in Dublin and largest enclosed park in Europe) and the Dublin Zoo. While the Dublin Zoo is not a park in the traditional sense, it is a fantastic place to spend an afternoon learning about the conservation work being done in Dublin in collaboration with zoos around the world.</p>
+        </section>
+        <section id="park-amenities-list">
+            <h2>Park Amenities List</h2>
+            <p>Below is the complete list of possible amenitites I have checked for at each park:</p>
             <ul>
                 <li>Clear signage</li>
                 <li>Gardens</li>
@@ -99,30 +106,108 @@
                 <li>Waste disposal</li>
                 <li>Water features</li>
             </ul>
+        </section>
+        <section id="why-dublin">
+            <h2>Why Dublin?</h2>
+            <p>I have been in Dublin taking a three week course on web accessibility with University of Michigan School of Information Professor Colleen Van Lent. I chose this course because it has enabled me to learn about both accessibility and Irish culture. It gave me a new perspective on how I conceptualize what it means for a place to be accessible without being limited by the American understanding of the term.</p>
+            <!-- <p>While the focus of the class is on digital accessibility, we also went to various museums to evaluate the accessibility of their physical spaces. We even visited the Irish Wheelchair Association's Headquarters to learn about their mission to work "with, and on behalf of, people with physical disabilities to drive positive change in Ireland through the influencing of public policy, the provision of quality services and enabling accessibility to all aspects of society."</p>
+            <p>You can read more here about our visit to the <a href="iwa.html">Irish Wheelchair Association's Headquarters</a>.</p> -->
+        </section>
+        <section id="why-parks">
+            <h2>Why Parks?</h2>
+            <p>Through my time living and learning here, I have focused on accessibility in both physical and digital spaces. Specifically, I have wandered through many Dublin parks looking for how the physical design of the spaces enables and invites interaction from the public. Which parks have the most comfortable benches, the most beautiful views, the coolest water features? And also which parks are accessible for wheelchair users? Which have clear signage? Which parks have playgrounds or spaces for those who need to move their bodies in order to relax?</p>
+        </section>
 
-            <p>make sortable by accessibility (rating)? or by amenitites (tags)?</p>
-        
-        </div>    
-        <div>
-            <h2>Photo Gallery</h2>
-            <p>maybe put all the images and then can sort by something? or link to the park pages?</p>
-            <p>alternatively, put an image gallery on the About page highlighting my general trip highlights</p>
-            <p>use lightbox here</p>
-        </div>
+        <!-- inspired by this Lightbox 2 tutorial: https://lokeshdhakar.com/projects/lightbox2/ -->
+        <section id="photo-gallery">
+            <h2>Images From My Time in Dublin</h2>
+            <div class = "gallery">
+                <a href="images/gallery/dracula.jpg" data-lightbox="my-trip" 
+                    data-title="Dracula street art in Dublin. Fun fact: Dracula's author Bram Stoker was born in Dublin in 1847." 
+                    data-alt="an electrical box with a painting of Count Dracula standing over a man holding a book titled 'Dracula'">
+                    <img src="images/gallery/dracula.jpg" 
+                    alt="an electrical box with a painting of Count Dracula standing over a man holding a book titled 'Dracula'" width="200">
+                </a>
+                <a href="images/gallery/zoo_waterfall.jpg" data-lightbox="my-trip" 
+                    data-title="Waterfall along the Kaziranga Forst Trail in Dublin Zoo. The Asian elephant exhibit is along this same trail."
+                    data-alt="a small waterfall over large boulders with some tree fonds in the foreground">
+                    <img src="images/gallery/zoo_waterfall.jpg" 
+                    alt="a small waterfall over large boulders with some tree fonds in the foreground" width="200">
+                </a>
+                <a href="images/gallery/iveagh_gardens_waterfall.jpg" data-lightbox="my-trip" 
+                    data-title="My favorite waterfall in Dublin. It's in Iveagh Gardens." 
+                    data-alt="small waterfall, surrounded by greenery, splashing down onto rocks">
+                    <img src="images/gallery/iveagh_gardens_waterfall.jpg" 
+                    alt="small waterfall, surrounded by greenery, splashing down onto rocks" width="200">
+                </a>
+                <a href="images/gallery/james_joyce.jpg" data-lightbox="my-trip" 
+                    data-title="The view from my favorite bench in St. Stephen's Green." 
+                    data-alt="bust of James Joyce on a pedastal in front of a grassy area with a few trees">
+                    <img src="images/gallery/james_joyce.jpg" 
+                    alt="bust of James Joyce on a pedastal in front of a grassy area with a few trees" width="200">
+                </a>
+                <a href="images/gallery/howth_cliff_walk.jpg" data-lightbox="my-trip" 
+                    data-title="My view during the Howth cliff walk." 
+                    data-alt="a rocky cliff covered in short greenery overlooking the ocean with a white ship in the background">
+                    <img src="images/gallery/howth_cliff_walk.jpg" 
+                    alt="a rocky cliff covered in short greenery overlooking the ocean with a white ship in the background" width="200">
+                </a>
+                <a href="images/gallery/cliffs_of_moher.jpg" data-lightbox="my-trip" 
+                    data-title="The Cliffs of Moher on a relatively dry day. It was sprinkling but not downpouring." 
+                    data-alt="the Cliffs of Moher on an overcast day">
+                    <img src="images/gallery/cliffs_of_moher.jpg" 
+                    alt="the Cliffs of Moher on an overcast day" width="200">
+                </a>
+                <a href="images/gallery/glendalough_arch.jpg" data-lightbox="my-trip" 
+                    data-title="Glendalough Monastic City Gateway: the entrance to the monastery. It dates back to the early 12th century." 
+                    data-alt="two stone arches with walls connecting them on either side behind a set of five steps with a handrail">
+                    <img src="images/gallery/glendalough_arch.jpg" 
+                    alt="two stone arches with walls connecting them on either side behind a set of five steps with a handrail" width="200">
+                </a>
+                <a href="images/gallery/glendalough_arch.jpg" data-lightbox="my-trip" 
+                    data-title="During m bus tour to Glendalough, Wicklow, and Kilkenny, I walked to the Upper Lake at Glendalough." 
+                    data-alt="a pebble beach in front of a lake with a big hill that has spruce trees at its base in the background">
+                    <img src="images/gallery/glendalough_upper_lake.JPG" 
+                    alt="a pebble beach in front of a lake with a big hill that has spruce trees at its base in the background" width="200">
+                </a>
+                <a href="images/gallery/wicklow_tour_cows.jpg" data-lightbox="my-trip" 
+                    data-title="One of many fields cows I saw during my bus tour of Glendalough, Wicklow, and Kilkenny." 
+                    data-alt="a grass field lined with short shurbs and a few trees with over forty black-and-white cows standing or lying in it">
+                    <img src="images/gallery/wicklow_tour_cows.jpg" 
+                    alt="a grass field lined with short shurbs and a few trees with over forty black-and-white cows standing or lying in it" width="200">
+                </a>
+                <a href="images/gallery/kilkenny_castle.jpg" data-lightbox="my-trip" 
+                    data-title="Kilkenny Castle. You can do a self-guided tour inside the castle and walk around the castle's park and gardens." 
+                    data-alt="part of a stone castle with wide paved paths and some grass areas in front of it">
+                    <img src="images/gallery/kilkenny_castle.jpg" 
+                    alt="part of a stone castle with wide paved paths and some grass areas in front of it" width="200">
+                </a>
 
-        <div>
-            <p>Testing area</p>
-            <h3 class="h2-link"><a href="iveagh_gardens.html">Iveagh Gardens</a></h3>
-            <p class="filler">...</p>
-        </div>
+                <a href="images/gallery/kilkenny_oak_tree.jpg" data-lightbox="my-trip" 
+                    data-title="A beautiful oak tree in the Kilkenny Castle park" 
+                    data-alt="An oak tree with a large covered poster in front of it in a grassy area with other trees">
+                    <img src="images/gallery/kilkenny_oak_tree.jpg" 
+                    alt="An oak tree with a large covered poster in front of it in a grassy area with other trees" width="200">
+                </a>
+                <a href="images/gallery/kilkenny_oak_poster.jpg" data-lightbox="my-trip" 
+                    data-title="The poster in front on the beatiful oak tree" 
+                    data-alt="A poster titles 'Ecology of an Oak Tree' that shows the various types of birds and other creatures that live in or near oak trees">
+                    <img src="images/gallery/kilkenny_oak_poster.jpg" 
+                    alt="A poster titles 'Ecology of an Oak Tree' that shows the various types of birds and other creatures that live in or near oak trees" width="200">
+                </a>
+            </div>
+        </section>
 
     </main>
-
+    
     <footer>
         <p>&#169; 2026 Evelyn Russell. All Rights Reserved.</p>
     </footer>
 
-    <a class="back-to-top" href="#main">Back to Top</a>
+    <!-- the following line of code is from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="material-icons">arrow_upward</span></button>
+
+    <script src="dist/js/lightbox-plus-jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src = "js/ai.js"></script>
     <script src = "js/script.js"></script>

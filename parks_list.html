@@ -36,15 +36,9 @@
             <a class="navLink" href="site_settings.html">Site Settings</a>
         </div>
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-        
         <a href="javascript:void(0);" class="icon" onclick="mobileNavMenu()">
             <i class="fa fa-bars"></i>
         </a>
-
-        <!-- <a href="javascript:void(0);" class="icon" id="hamburger">
-            <i class="fa fa-bars"></i>
-        </a> -->
-
     </nav>
 
     <header>
@@ -53,7 +47,7 @@
         </h1>
     </header>
     <main>
-        <div id="parks-list">
+        <section id="parks-list">
             <h2>Parks List</h2>
             <!-- <p>The complete list of possible amenitites I have checked for at each park is</p>
             <ul>
@@ -69,37 +63,39 @@
             </ul> -->
 
             <p>make sortable by accessibility (rating)? or by amenitites (tags)?</p>
-        
-            <section class="park">
-            <h3 class="h2-link"><a href="dubh_linn.html">Dubh Linn</a></h3>
-            <p>Perfect for history lovers, Dubh Linn Gardens is located behind the Dublin Castle and features two museums, the Garda Memorial Garden, and a circular lawns decorated with patterns representing sea serpents. 
-            </p>
-            </section>
+            
+            <div class="park-grid">
+                <article class="park">
+                <h3 class="h2-link"><a href="dubh_linn.html">Dubh Linn</a></h3>
+                <p>Perfect for history lovers, Dubh Linn Gardens is located behind the Dublin Castle and features two museums, the Garda Memorial Garden, and a circular lawns decorated with patterns representing sea serpents. 
+                </p>
+                </article>
 
-            <section class="park">
-            <h3 class="h2-link"><a href="iveagh_gardens.html">Iveagh Gardens</a></h3>
-            <p>Featuring a yew maze, rose garden, and even a waterfall, Iveagh Gardens is the perfect getaway in the hustle of the city center. The archery field which is sunk down below street level, is a great place to take in the sun while serenely lounging in the grass or chatting with friends. 
-            </p>
-            </section>
+                <article class="park">
+                <h3 class="h2-link"><a href="iveagh_gardens.html">Iveagh Gardens</a></h3>
+                <p>Featuring a yew maze, rose garden, and even a waterfall, Iveagh Gardens is the perfect getaway in the hustle of the city center. The archery field which is sunk down below street level, is a great place to take in the sun while serenely lounging in the grass or chatting with friends. 
+                </p>
+                </article>
 
-            <section class="park">
-            <h3 class="h2-link"><a href="peace_park.html">The Peace Park</a></h3>
-            <p>Peace Park is a small park with ample bench seating across the street from Christchurch Cathedral. The park sits a few feet below street level which contributes to its peaceful atmosphere by reducing the sounds of the bustling street.
-            </p>
-            </section>
+                <article class="park">
+                <h3 class="h2-link"><a href="peace_park.html">The Peace Park</a></h3>
+                <p>Peace Park is a small park with ample bench seating across the street from Christchurch Cathedral. The park sits a few feet below street level which contributes to its peaceful atmosphere by reducing the sounds of the bustling street.
+                </p>
+                </article>
 
-            <section class="park">
-            <h3 class="h2-link">St Patrick's Park</h3>
-            <p>With a weekly Sunday market, it's very own cafe, and the occassional tolling of church bells, this park is a great place to people watch. Or dog watch if you prefer, as there are frequently dog owners playing fetch in the grassy center of the park.
-            </p>
-            </section>
+                <article class="park">
+                <h3 class="h2-link">St Patrick's Park</h3>
+                <p>With a weekly Sunday market, it's very own cafe, and the occassional tolling of church bells, this park is a great place to people watch. Or dog watch if you prefer, as there are frequently dog owners playing fetch in the grassy center of the park.
+                </p>
+                </article>
 
-            <section class="park">
-            <h3 class="h2-link">St Stephen's Green</h3>
-            <p>Comprised of 22 acres of greenspace in Dublin city center, St. Stephen's Green is the largest of the city's Georgian Garden Squares. The park also features 21 historical placards to read as you stroll through. Additionally, it has a playground, ample seating, and open green spaces making it perfect for a stroll, picnic, or playdate!
-            </p>
-            </section>
-        </div>
+                <article class="park">
+                <h3 class="h2-link">St Stephen's Green</h3>
+                <p>Comprised of 22 acres of greenspace in Dublin city center, St. Stephen's Green is the largest of the city's Georgian Garden Squares. The park also features 21 historical placards to read as you stroll through. Additionally, it has a playground, ample seating, and open green spaces making it perfect for a stroll, picnic, or playdate!
+                </p>
+                </article>
+            </div>
+        </section>
 
     </main>
 
@@ -107,7 +103,9 @@
         <p>&#169; 2026 Evelyn Russell. All Rights Reserved.</p>
     </footer>
 
-    <a class="back-to-top" href="#main">Back to Top</a>
+    <!-- the following line of code is from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="material-icons">arrow_upward</span></button>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src = "js/ai.js"></script>
     <script src = "js/script.js"></script>

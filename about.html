@@ -12,7 +12,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About My Trip</title>
+
+    <!-- lightbox 2 -->
+    <link href="dist/css/lightbox.css" rel="stylesheet">
 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -45,60 +48,65 @@
             <a class="navLink" href="site_settings.html">Site Settings</a>
         </div>
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-        
         <a href="javascript:void(0);" class="icon" onclick="mobileNavMenu()">
             <i class="fa fa-bars"></i>
         </a>
-
-        <!-- <a href="javascript:void(0);" class="icon" id="hamburger">
-            <i class="fa fa-bars"></i>
-        </a> -->
     </nav>
 
 
     <header>
         <h1>
-            About
+            About My Trip
         </h1>
     </header>
     <main>
-        <div class="intro">
-            <h2>Céad míle fáilte!</h2>
-            <p>Talk more about why I'm here. How I chose parks, and how I got interested in accessibility</p>
-        </div>
-        <div>
+
+        <!-- try using this to make a timeline for my itinerary? https://www.w3schools.com/howto/howto_css_timeline.asp -->
+        
+        <section id="itinerary">
+            <h2>My Itinerary</h2>
+            <details class="itinerary-week" id="week1">
+                <summary>Week 1</summary>
+                <p>write a summary of week 1</p>
+            </details>
+            <details class="itinerary-week" id="week2">
+                <summary>Week 2</summary>
+                <p>write a summary of week 2</p>
+            </details>
+            <details class="itinerary-week" id="week3">
+                <summary>Week 3</summary>
+                <p>write a summary of week 3</p>
+            </details>
+
+        </section>
+        <section id="favorites">
             <h2>My Favorites</h2>
-            <p>in polaroid photo style gallery form, ex. Favorite street art: mural of the St. Stephens Park ducks at Michael Mallin Park</p>
+            <div class="favorites">
             <h3>Experiences</h3>
+            <p>Walking Tour: The Little Museum of Dublin Ultimate Experience - an oral history of Dublin and a walking tour of St Stephen's Green</p>
+            <p>Bus Tour: Wicklow, Glendalough, Kilkenny bus tour through Collins Tours</p>
+            </div>
+            <div class="favorites">
+            <h3>Places to be</h3>
             <p>Museum: The Little Museum of Dublin</p>
-            <p>Tour: Wicklow, Glendalough, Kilkenny bus tour</p>
-            <p>Treat: Turskich Delights from Ella's Heaven Cafe & Bakery</p>
-
-            
-            <p>Park</p>
-            <p>Cafe</p>
-            <p>Restaurant</p>
-
-            <p>Photos I took: see the photo gallery</p>
-        </div>
-        <div class="gallery">
-            <h2>Photo Gallery</h2>
-            <p>introduce the photo gallery as a highlight reel of my time in Ireland focusing mainly food, nature, and fun</p>
-            <p>maybe put all the images and then can sort by something? or link to the park pages?</p>
-            <p>alternatively, put an image gallery on the About page highlighting my general trip highlights</p>
-            <p>use lightbox here!</p>
-        </div>
-
-        <section>
-            <p class = "spaceholder">e</p>
+            <p>Park: St Stephen's Green</p>
+            </div>
+            <div class="favorites">
+            <h3>Foods</h3>
+            <p>Vegan Sausage Roll: Roco Cafe in Dublin</p>
+            <p>Roast Cashewnut Stir Fried with Chicken (chicken stirfry with cashews and mixed veggies): The Hidden Artisan Asian Restaurant in Galway</p>
+            <p>Turkish Delights (pistachio and hazelnut): Ella's Heaven Cafe & Bakery in Dublin</p>
+            </div>
         </section>
 
+        
     </main>
 
     <footer>
         <p>&#169; 2026 Evelyn Russell. All Rights Reserved.</p>
     </footer>
 
+    <script src="dist/js/lightbox-plus-jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script> src:"js/ai.js"</script>
     <script> src:"js/script.js"</script>

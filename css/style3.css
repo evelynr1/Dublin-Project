@@ -24,6 +24,7 @@
     --accent2: #713e93;
     --accent3: #FCFBFD;
     /* --links: #384d48; */
+    --shadow: 0 4px 12px rgba(0, 53, 28, 0.12);
 }
 
 *{
@@ -44,6 +45,14 @@ nav{
     font-family: "Signika", sans-serif;
 }
 
+nav ul{
+    margin: 0px 0px 0px 30px;
+}
+
+.topnav {
+  border-bottom: 2px solid var(--ink);
+}
+
 header{
     background-color: var(--parchment);
     color: var(--accent2);
@@ -51,7 +60,7 @@ header{
 }
 
 main{
-    margin: 10px;
+    margin: 0px 10px 10px;
 }
 
 footer{
@@ -60,6 +69,7 @@ footer{
     padding: 20px 0px;
     margin: auto;
     text-align: center;
+    width: 100%;
 }
 
 
@@ -77,6 +87,18 @@ footer{
     border-left: 3px solid var(--accent2);
     margin: 10px;
     padding: 5px;
+}
+
+.gallery{
+  display: grid;
+  grid-template-columns: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* style this as a timeline? */
+#itinerary{
+
 }
 
 
@@ -116,21 +138,13 @@ a:hover, a:focus{
     background-color: var(--accent1);
 }
 
-.topnav {
-  border-bottom: 2px solid var(--ink);
+#why-parks p, #why-dublin p, #welcome p{
+    text-indent: 20px;
 }
 
 /* .accessibility-info p{
     margin: 0px 0px 0px 30px;
 } */
-
-
-/* back to top button styling */
-.back-to-top{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}
 
 /* skip to main content button styling */
 .skip-link {
@@ -184,6 +198,24 @@ color: var(--ink);
 
 
 
+/* to go with the W3Schools code for the mobile nav, a class for open hamburger menu */
+.open{
+    display: block;
+    /* display: none; */
+}
+
+#home{
+    background-color: var(--accent1);
+}
+
+/* for when a link in the nav is hovered on or in focus */
+.activeNavLink{
+    /* border: 5px solid var(--accent1); */
+    background-color: var(--parchment);
+    color: var(--ink);
+}
+
+
 /* media queries */
 /* tablet size */
 @media screen and (min-width: 600px){
@@ -205,10 +237,13 @@ color: var(--ink);
     /* .park-info{
     display: grid;
     grid-template-columns: 30% 60%; */
-}
+
 
 
     /* navbar for tablet and desktop breakpoints */
+    
+
+
 
     /* skip to main content */ 
     /* move back to desktop */
@@ -240,19 +275,18 @@ color: var(--ink);
 }
 
 
-/* to go with the W3Schools code for the mobile nav, a class for open hamburger menu */
-.open{
-    display: block;
-    /* display: none; */
-}
 
-#home{
-    background-color: var(--accent1);
-}
 
-/* for when a link in the nav is hovered on or in focus */
-.activeNavLink{
-    /* border: 5px solid var(--accent1); */
-    background-color: var(--parchment);
-    color: var(--ink);
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .card:hover,
+  .card:focus-within,
+  {
+    transform: none;
+  }
+
+  /* reduced the motion for myBtn (scroll to top button) */
+
 }
