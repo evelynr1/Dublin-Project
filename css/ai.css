@@ -71,11 +71,11 @@
 }
 
 /* card grid for parks in park list */
-.parks-grid {
+.park-grid {
   display: grid;
   gap: 16px;
   grid-template-columns: 1fr;
-  margin-top: 14px;
+  margin: 14px 0px;
 }
 
 .park {
@@ -92,7 +92,7 @@
 .park:focus-within {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lift);
-  border-top-color: var(--maize);
+  border-top-color: var(--accent2);
 }
 
 .park h3 {
@@ -147,6 +147,25 @@ main {
   background-color: var(--ink);
   border-color: var(--parchment);
   color: var(--parchment);
+}
+
+/* to stop the footer from floating up from the bottom */
+/* code from https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ */
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 4rem;    /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  /* bottom: 0; */
+  bottom: -120px;
+  width: 100%;
+  height: 4rem;            /* Footer height */
 }
 
 /*  */

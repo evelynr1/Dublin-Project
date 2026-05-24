@@ -27,19 +27,19 @@
     <!-- next section = from https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
     <!-- Top Navigation Menu -->
     <nav class="topnav">
-        <a href="index.html" class="navLink active">Parks in Dublin</a>
+        <a id="homepage" href="index.html" class="navLink">Parks in Dublin</a>
         <!-- Navigation links (hidden by default) -->
         <div id="myLinks">
             <a class="navLink" id="parks-list-nav-link" href="parks_list.html">Parks List</a>
             <!-- <a class="navLink" href="about.html">About</a> -->
             <ul>
-                <li><a href="dubh_linn.html">Dubh Linn</a></li>
-                <li><a href="iveagh_gardens.html">Iveagh Gardens</a></li>
-                <li><a href="peace_park.html">The Peace Park</a></li>
-                <li><a href="st_patricks.html">St Patrick's Park</a></li>
-                <li><a href="st_stephens.html">St Stephen's Green</a></li>
+                <li><a class="navLink" href="dubh_linn.html">Dubh Linn</a></li>
+                <li><a class="navLink" href="iveagh_gardens.html">Iveagh Gardens</a></li>
+                <li><a class="navLink active" href="peace_park.html">The Peace Park</a></li>
+                <li><a class="navLink" href="st_patricks.html">St Patrick's Park</a></li>
+                <li><a class="navLink" href="st_stephens.html">St Stephen's Green</a></li>
             </ul>
-            <a class="navLink" href="site_settings.html">Site Settings</a>
+            <a class="navLink settings" href="site_settings.html">Site Settings</a>
         </div>
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
         <a href="javascript:void(0);" class="icon" onclick="mobileNavMenu()">
@@ -90,7 +90,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
              
-
+            <!-- the alt text of the indicators is intentionally since they are just for decoration -->
             <ol class="carousel-indicators">
                 <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0">
                     <img src="images/peace_park/tree_art.jpg" class="d-block w-100" alt="">
@@ -118,11 +118,10 @@
             <section class="park-info">
                 <h2>Park Information</h2>
                 <div class="section-content">
-                <p>Address: 13 Christchurch Pl, Wood Quay, Dublin, Ireland</p>
-                <p>Hours: 10AM to 8PM daily</p>
-                <p>Website: dublincity.ie/parks-and-nature </p>
-                <p>How to get there: walking, bus</p>
-                <p>Amenities</p>
+                <p><span class="info-type">Address:</span> 13 Christchurch Pl, Wood Quay, Dublin, Ireland</p>
+                <p><span class="info-type">Hours:</span> 10AM to 8PM daily</p>
+                <p><span class="info-type">Website:</span> dublincity.ie/parks-and-nature </p>
+                <p><span class="info-type">Amenities:</span></p>
                 <ul>
                     <li>Seating</li>
                     <li>Shaded areas</li>
@@ -131,9 +130,9 @@
             </section>
 
             <section class="accessibility-info">
-                <h3>
+                <h2>
                     Accessibility
-                </h3>
+                </h2>
                 <div class="section-content">
                     <p>This park is wheelchair accessible. There is a ramp and stairs at the park entrance. There are five steps up to the tree artwork in the back of the park to view it up close, but it is visible thorughout the whole park.</p>
                 </div>

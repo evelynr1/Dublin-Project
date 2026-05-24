@@ -33,19 +33,19 @@
     <!-- next section = from https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
     <!-- Top Navigation Menu -->
     <nav class="topnav">
-        <a href="index.html" class="navLink active">Parks in Dublin</a>
+        <a id="homepage" href="index.html" class="navLink">Parks in Dublin</a>
         <!-- Navigation links (hidden by default) -->
         <div id="myLinks">
             <a class="navLink" id="parks-list-nav-link" href="parks_list.html">Parks List</a>
             <!-- <a class="navLink" href="about.html">About</a> -->
             <ul>
-                <li><a href="dubh_linn.html">Dubh Linn</a></li>
-                <li><a href="iveagh_gardens.html">Iveagh Gardens</a></li>
-                <li><a href="peace_park.html">The Peace Park</a></li>
-                <li><a href="st_patricks.html">St Patrick's Park</a></li>
-                <li><a href="st_stephens.html">St Stephen's Green</a></li>
+                <li><a class="navLink" href="dubh_linn.html">Dubh Linn</a></li>
+                <li><a class="navLink" href="iveagh_gardens.html">Iveagh Gardens</a></li>
+                <li><a class="navLink" href="peace_park.html">The Peace Park</a></li>
+                <li><a class="navLink" href="st_patricks.html">St Patrick's Park</a></li>
+                <li><a class="navLink" href="st_stephens.html">St Stephen's Green</a></li>
             </ul>
-            <a class="navLink" href="site_settings.html">Site Settings</a>
+            <a class="navLink active settings" href="site_settings.html">Site Settings</a>
         </div>
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
         <a href="javascript:void(0);" class="icon" onclick="mobileNavMenu()">
@@ -60,22 +60,40 @@
     </header>
     <main>
         <h2>Accessibility Means Having Options</h2>
-        <p>As I learned during a group discussion at the Irish Wheelchair Association Headquarters and from a talk by Haben Girma at aXe Con 2026, making things accessible means giving people options.</p>
-        <p>Accessibility is not a one size fits all approach. As such, I want this website to be adaptable to various needs.</p>
+        <p>Accessibility is not a one size fits all approach. As such, I want this website to be adaptable to various needs. Feel free to play around with the settings on this page to learn more about them.</p>
         <div>
-            <h3>Things you can customize on this site</h3>
-            
-            <ul>
-                <li>Text size</li>
-                <li>Color or black-and-white for highest contrast</li>
-                <li>No images</li>
-                <!-- <li>Font - regular vs hyperlegible</li>
-                <li>?Color scheme - light mode/dark mode</li>
-                <li>Add a button to show a sorted list of the parks by accessibility?</li>
-                <li>Toggle park open/closed buttons on and off?</li>
-                <li>anything else?</li> -->
-            </ul>
+            <h3>Select text size</h3>
+            <div class="text-size-buttons"></div>
+            <h3>Select black-and-white or color</h3>
+            <button id="dark-mode-button">Dark Mode</button>
+            <h3>Hide all images on the site</h3>
+            <button id="image-visibility-button">Hide Images</button>
+
         </div>
+
+        <section id="photo-gallery">
+            <h2>Images From My Time in Dublin</h2>
+            <div class = "gallery">
+                <!-- <a href="images/gallery/dracula.jpg" data-lightbox="my-trip" 
+                    data-title="Dracula street art in Dublin. Fun fact: Dracula's author Bram Stoker was born in Dublin in 1847." 
+                    data-alt="an electrical box with a painting of Count Dracula standing over a man holding a book titled 'Dracula'">
+                    <img src="images/gallery/dracula.jpg" 
+                    alt="an electrical box with a painting of Count Dracula standing over a man holding a book titled 'Dracula'" width="200">
+                </a> -->
+                <a href="images/gallery/zoo_waterfall.jpg" data-lightbox="my-trip" 
+                    data-title="Waterfall along the Kaziranga Forst Trail in Dublin Zoo. The Asian elephant exhibit is along this same trail."
+                    data-alt="a small waterfall over large boulders with some tree fonds in the foreground">
+                    <img src="images/gallery/zoo_waterfall.jpg" 
+                    alt="a small waterfall over large boulders with some tree fonds in the foreground" width="200">
+                </a>
+                <a href="images/gallery/iveagh_gardens_waterfall.jpg" data-lightbox="my-trip" 
+                    data-title="My favorite waterfall in Dublin. It's in Iveagh Gardens." 
+                    data-alt="small waterfall, surrounded by greenery, splashing down onto rocks">
+                    <img src="images/gallery/iveagh_gardens_waterfall.jpg" 
+                    alt="small waterfall, surrounded by greenery, splashing down onto rocks" width="200">
+                </a>
+            </div>
+        </section>
     </main>
 
     <footer>

@@ -27,19 +27,19 @@
     <!-- next section = from https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
     <!-- Top Navigation Menu -->
     <nav class="topnav">
-        <a href="index.html" class="navLink active">Parks in Dublin</a>
+        <a id="homepage" href="index.html" class="navLink">Parks in Dublin</a>
         <!-- Navigation links (hidden by default) -->
         <div id="myLinks">
             <a class="navLink" id="parks-list-nav-link" href="parks_list.html">Parks List</a>
             <!-- <a class="navLink" href="about.html">About</a> -->
             <ul>
-                <li><a href="dubh_linn.html">Dubh Linn</a></li>
-                <li><a href="iveagh_gardens.html">Iveagh Gardens</a></li>
-                <li><a href="peace_park.html">The Peace Park</a></li>
-                <li><a href="st_patricks.html">St Patrick's Park</a></li>
-                <li><a href="st_stephens.html">St Stephen's Green</a></li>
+                <li><a class="navLink" href="dubh_linn.html">Dubh Linn</a></li>
+                <li><a class="navLink" href="iveagh_gardens.html">Iveagh Gardens</a></li>
+                <li><a class="navLink" href="peace_park.html">The Peace Park</a></li>
+                <li><a class="navLink" href="st_patricks.html">St Patrick's Park</a></li>
+                <li><a class="navLink active" href="st_stephens.html">St Stephen's Green</a></li>
             </ul>
-            <a class="navLink" href="site_settings.html">Site Settings</a>
+            <a class="navLink settings" href="site_settings.html">Site Settings</a>
         </div>
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
         <a href="javascript:void(0);" class="icon" onclick="mobileNavMenu()">
@@ -127,6 +127,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
 
+            <!-- the alt text of the indicators is intentionally since they are just for decoration -->
             <ol class="carousel-indicators">
                 <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active">
                     <img src="images/st_stephens/arch_entrance.jpg" class="d-block w-100" alt="">
@@ -196,10 +197,9 @@
 
             <section class="park-info">
                 <h2>Park Information</h2>
-                <p>Address: St Stephen's Green, Dublin 2, Ireland</p>
-                <p>Hours: 7:30AM to 8PM daily</p>
-                <p>How to get there: walking, bus, tram</p>
-                <p>Amenities</p>
+                <p><span class="info-type">Address:</span> St Stephen's Green, Dublin 2, Ireland</p>
+                <p><span class="info-type">Hours:</span> 7:30AM to 8PM daily</p>
+                <p><span class="info-type">Amenities:</span></p>
                 <ul>
                     <li>Clear signage</li>
                     <li>Green spaces</li>
@@ -210,10 +210,12 @@
                     <li>Waste disposal</li>
                     <li>Water features</li>
                 </ul>
-                <div class="accessibility-info">
-                    <h3>
-                        Accessibility
-                    </h3>
+            </section>
+            <section class="accessibility-info">
+                <h2>
+                    Accessibility
+                </h2>
+                <div class="section-content">
                     <p>This park is mostly wheelchair accessible. Every entrance is wheelchair accessible and the paths are wide and paved. There is a seating area by the W. B. Yeats memorial which is only accesible by going up steps. There is a public bathroom for 0.25 euros available at St Stephen's Green Shopping Centre just outside the park.</p>
                 </div>
             </section>
@@ -235,7 +237,7 @@
                         <ul>
                             <li>The Rolling Donut</li>
                             <li>Mister Magpie Coffee (Leeson Street)</li>
-                            <li>ALl Rosey's Coffee</li>
+                            <li>All Rosey's Coffee</li>
                         </ul>
                     </li>
                 </ul>

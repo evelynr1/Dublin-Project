@@ -27,19 +27,19 @@
     <!-- next section = from https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
     <!-- Top Navigation Menu -->
     <nav class="topnav">
-        <a href="index.html" class="navLink active">Parks in Dublin</a>
+        <a id="homepage" href="index.html" class="navLink">Parks in Dublin</a>
         <!-- Navigation links (hidden by default) -->
         <div id="myLinks">
             <a class="navLink" id="parks-list-nav-link" href="parks_list.html">Parks List</a>
             <!-- <a class="navLink" href="about.html">About</a> -->
             <ul>
-                <li><a href="dubh_linn.html">Dubh Linn</a></li>
-                <li><a href="iveagh_gardens.html">Iveagh Gardens</a></li>
-                <li><a href="peace_park.html">The Peace Park</a></li>
-                <li><a href="st_patricks.html">St Patrick's Park</a></li>
-                <li><a href="st_stephens.html">St Stephen's Green</a></li>
+                <li><a class="navLink" href="dubh_linn.html">Dubh Linn</a></li>
+                <li><a class="navLink active" href="iveagh_gardens.html">Iveagh Gardens</a></li>
+                <li><a class="navLink" href="peace_park.html">The Peace Park</a></li>
+                <li><a class="navLink" href="st_patricks.html">St Patrick's Park</a></li>
+                <li><a class="navLink" href="st_stephens.html">St Stephen's Green</a></li>
             </ul>
-            <a class="navLink" href="site_settings.html">Site Settings</a>
+            <a class="navLink settings" href="site_settings.html">Site Settings</a>
         </div>
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
         <a href="javascript:void(0);" class="icon" onclick="mobileNavMenu()">
@@ -59,25 +59,25 @@
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item">
-                <img src="images/iveagh_gardens/archery_grounds.jpg" class="d-block w-100" alt="">
+                <img src="images/iveagh_gardens/archery_grounds.jpg" class="d-block w-100" alt="sunken grass field with steps leading down to it occupied by scattered people sitting in the grass">
                 </div>
                 <div class="carousel-item active">
-                <img src="images/iveagh_gardens/entrance1.jpg" class="d-block w-100" alt="">
+                <img src="images/iveagh_gardens/entrance1.jpg" class="d-block w-100" alt="two cars in a parking lot in front of a stone wall with a wrought iron gate">
                 </div>
                 <div class="carousel-item">
-                <img src="images/iveagh_gardens/entrance2_looking_in.jpg" class="d-block w-100" alt="">
+                <img src="images/iveagh_gardens/entrance2_looking_in.jpg" class="d-block w-100" alt="two brick columns with an open wrought iron gate looking over a flight of stairs into a park">
                 </div>
                 <div class="carousel-item">
-                <img src="images/iveagh_gardens/entrance2_looking_out.jpg" class="d-block w-100" alt="">
+                <img src="images/iveagh_gardens/entrance2_looking_out.jpg" class="d-block w-100" alt="a flight of stairs going up with greenery on both sides and a trash can to the right">
                 </div>
                 <div class="carousel-item">
-                <img src="images/iveagh_gardens/entrance3_ramp.jpg" class="d-block w-100" alt="">
+                <img src="images/iveagh_gardens/entrance3_ramp.jpg" class="d-block w-100" alt="a flight of stairs adjecent to a ramp which both lead up out of the park">
                 </div>
                 <div class="carousel-item">
-                <img src="images/iveagh_gardens/hedge_maze_far.jpg" class="d-block w-100" alt="">
+                <img src="images/iveagh_gardens/hedge_maze_far.jpg" class="d-block w-100" alt="two people walking around in a hip height hedge maze">
                 </div>
                 <div class="carousel-item">
-                <img src="images/iveagh_gardens/in_hedge_maze.jpg" class="d-block w-100" alt="">
+                <img src="images/iveagh_gardens/in_hedge_maze.jpg" class="d-block w-100" alt="one person walking through a hip height hedge maze with narrow paths">
                 </div>
                 <div class="carousel-item">
                 <img src="images/iveagh_gardens/map_on_ground.jpg" class="d-block w-100" alt="">
@@ -112,6 +112,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
 
+            <!-- the alt text of the indicators is intentionally since they are just for decoration -->
             <ol class="carousel-indicators">
                 <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0">
                     <img src="images/iveagh_gardens/archery_grounds.jpg" class="d-block w-100" alt="">
@@ -193,12 +194,7 @@
                 <!-- add a green/yellow/red indicator for open/closingsoon/closed -->
                 <p><span class="info-type">Address:</span> St Stephen's Green, Park, Dublin 2, D02 HX65, Ireland</p>
                 <p><span class="info-type">Website:</span> <a href="iveaghgardens.ie">Iveagh Gardens | Experience a sense of wonder in Dublin’s ‘secret garden’</a> </p>
-                <p><span class="info-type">Accessibility:</span> This park is wheelchair accessible.</p>
-                </div>
-                
-            </section class="park-info">
-                <h2><span class="info-type" id="amenities">Amenities:</span></h2>
-                <div class="park-info-specifics">
+                <p><span class="info-type">Amenities:</span></p>
                 <ul>
                     <li>Gardens</li>
                     <li>Green spaces</li>
@@ -209,6 +205,15 @@
                     <li>Waste disposal</li>
                     <li>Water features</li>
                 </ul>
+                </div>
+            </section>
+
+            <section class="accessibility-info">
+                <h2>
+                    Accessibility
+                </h2>
+                <div class="section-content">
+                    <p>This park is wheelchair accessible.</p>
                 </div>
             </section>
 

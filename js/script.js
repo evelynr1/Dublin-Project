@@ -1,29 +1,29 @@
-//mobile nav hamburger menu
-// document.querySelector("#hamburger").addEventListener("click", function () {
-//   // this.style.display = "none";
-//   document.querySelector(".topnav #myLinks").classList.toggle("open");
-//   console.log("hamburger clicked")
-//   });
-
-// const mobileNav = document.querySelector("#hamburger");
-// // it works to turn the correct area yellow, but not to set it to display:none
-// mobileNav.addEventListener("click", function () {
-//   console.log("hamburger menu");
-//   // document.querySelector(".topnav #myLinks").classList.toggle("open");
-//   document.querySelector(".topnav #myLinks").style.backgroundColor = "yellow";
-  
-//   console.log(document.querySelector(".topnav #myLinks").className);
-// })
-
-
-// skip to top link behavior when in focus
-// const skipLink = document.querySelector(".skip-link");
-// skipLink.addEventListener("focus", function() {
-//   this.style.color = "var(--ink)";
-//   this.transform = "translateY(0)";
-//   this.outline = "3px solid var(--focus)";
-//   // this.outline-offset = "3px";
-// })
+//buttons to switch between small, regular, and large text size
 
 
 
+//color to dark mode
+let darkBtn = document.querySelector("#dark-mode-button");
+
+darkBtn.addEventListener('click', function() {
+    var x = document.body;
+    x.classList.toggle("dark-mode");
+    this.innerHTML = "Light Mode";
+});
+
+//hide images button
+//with minor help from this code: https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
+let imgBtn = document.querySelector("#image-visibility-button");
+
+imgBtn.addEventListener('click', function() {
+    let images = document.querySelectorAll('img');
+    images.forEach(function (image) {
+        if (image.style.display === "none") {
+            image.style.display = "block";
+            imgBtn.innerHTML = "Hide Images";
+        } else {
+            image.style.display = "none";
+            imgBtn.innerHTML = "Show Images";
+        }
+    });
+});

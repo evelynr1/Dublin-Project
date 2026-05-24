@@ -30,19 +30,19 @@
     <!-- next section = from https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
     <!-- Top Navigation Menu -->
     <nav class="topnav">
-        <a href="index.html" class="navLink active">Parks in Dublin</a>
+        <a id="homepage" href="index.html" class="navLink">Parks in Dublin</a>
         <!-- Navigation links (hidden by default) -->
         <div id="myLinks">
-            <a class="navLink" id="parks-list-nav-link" href="parks_list.html">Parks List</a>
+            <a class="navLink active" id="parks-list-nav-link" href="parks_list.html">Parks List</a>
             <!-- <a class="navLink" href="about.html">About</a> -->
             <ul>
-                <li><a href="dubh_linn.html">Dubh Linn</a></li>
-                <li><a href="iveagh_gardens.html">Iveagh Gardens</a></li>
-                <li><a href="peace_park.html">The Peace Park</a></li>
-                <li><a href="st_patricks.html">St Patrick's Park</a></li>
-                <li><a href="st_stephens.html">St Stephen's Green</a></li>
+                <li><a class="navLink" href="dubh_linn.html">Dubh Linn</a></li>
+                <li><a class="navLink" href="iveagh_gardens.html">Iveagh Gardens</a></li>
+                <li><a class="navLink" href="peace_park.html">The Peace Park</a></li>
+                <li><a class="navLink" href="st_patricks.html">St Patrick's Park</a></li>
+                <li><a class="navLink" href="st_stephens.html">St Stephen's Green</a></li>
             </ul>
-            <a class="navLink" href="site_settings.html">Site Settings</a>
+            <a class="navLink settings" href="site_settings.html">Site Settings</a>
         </div>
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
         <a href="javascript:void(0);" class="icon" onclick="mobileNavMenu()">
@@ -71,8 +71,6 @@
                 <li>Water features</li>
             </ul> -->
 
-            <p>make sortable by accessibility (rating)? or by amenitites (tags)?</p>
-            
             <div class="park-grid">
                 <article class="park">
                 <h3 class="h2-link"><a href="dubh_linn.html">Dubh Linn</a></h3>
@@ -93,13 +91,13 @@
                 </article>
 
                 <article class="park">
-                <h3 class="h2-link">St Patrick's Park</h3>
+                <h3 class="h2-link"><a href="st_patricks.html">St Patrick's Park</a></h3>
                 <p>With a weekly Sunday market, it's very own cafe, and the occassional tolling of church bells, this park is a great place to people watch. Or dog watch if you prefer, as there are frequently dog owners playing fetch in the grassy center of the park.
                 </p>
                 </article>
 
                 <article class="park">
-                <h3 class="h2-link">St Stephen's Green</h3>
+                <h3 class="h2-link"><a href="st_stephens.html">St Stephen's Green</a></h3>
                 <p>Comprised of 22 acres of greenspace in Dublin city center, St. Stephen's Green is the largest of the city's Georgian Garden Squares. The park also features 21 historical placards to read as you stroll through. Additionally, it has a playground, ample seating, and open green spaces making it perfect for a stroll, picnic, or playdate!
                 </p>
                 </article>
