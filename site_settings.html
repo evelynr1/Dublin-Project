@@ -1,7 +1,7 @@
 <!-- offer text size, regular vs hyperlegible font, maybe dark mode -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,8 +64,11 @@
         <div>
             <h3>Select text size</h3>
             <div class="text-size-buttons"></div>
+
             <h3>Select black-and-white or color</h3>
-            <button id="dark-mode-button">Dark Mode</button>
+            <!-- button code from https://dev.to/whitep4nth3r/the-best-lightdark-mode-theme-toggle-in-javascript-368f -->
+            <button type="button" data-theme-toggle aria-label="Change to light theme">Change to light theme (or icon here)</button>
+            
             <h3>Hide all images on the site</h3>
             <button id="image-visibility-button">Hide Images</button>
 

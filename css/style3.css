@@ -1,12 +1,29 @@
 :root {
+    /* --parchment: #fcfaf8;
+    --ink: #4a5a4e;
+    --accent1: #295c70;
+    --accent2: #713e93;
+    --links: #295c70; */
+    --shadow: 0 4px 12px rgba(0, 53, 28, 0.12);
+    --shadow-lift: 0 10px 24px rgba(0, 53, 28, 0.20);
+}
+
+/* data-theme related code from https://dev.to/whitep4nth3r/the-best-lightdark-mode-theme-toggle-in-javascript-368f */
+[data-theme="light"] {
     --parchment: #fcfaf8;
     --ink: #4a5a4e;
     --accent1: #295c70;
     --accent2: #713e93;
     --links: #295c70;
-    --shadow: 0 4px 12px rgba(0, 53, 28, 0.12);
-    --shadow-lift: 0 10px 24px rgba(0, 53, 28, 0.20);
 }
+[data-theme="dark"] {
+    --parchment: #313A34;
+    --ink: #fcfaf8;
+    --accent1: #AAD1DF;
+    --accent2: #D9C3E5;
+    --links: #fcfaf8;
+}
+
 
 .dark-mode{
     background-color: var(--ink);
