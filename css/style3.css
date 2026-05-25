@@ -137,6 +137,34 @@ section ul li{
     justify-content: center;
 }
 
+.info{
+    border: 3px solid var(--ink);
+    border-radius: 30px;
+    padding: 0px 20px 10px;
+    margin: 0px 0px 15px;
+}
+
+.info h2{
+    text-align: center;
+}
+
+.info-type{
+    font-weight: 700;
+}
+
+
+/* .park-description{
+    margin: 15px;
+} */
+
+#park-amenities-list ul li{
+    margin-left: 20px;
+}
+
+/* .park-description p{
+    border-left: 5px solid blue;
+} */
+
 .introduction-grid1{
     display: grid;
     grid-template-columns: 96%;
@@ -199,7 +227,8 @@ h3{
 }
 
 p{
-    text-indent: 20px;
+    /* text-indent: 20px; */
+    padding-bottom: 5px;
 }
 
 
@@ -247,32 +276,9 @@ color: var(--ink);
 
 
 
-.info-type{
-    font-weight: 700;
-}
 
-.park-info{
-    border: 3px solid var(--ink);
-    border-radius: 30px;
-    padding: 5px;
-    margin: 0px 0px 15px;
-}
 
-.park-info h2{
-    text-align: center;
-}
 
-.park-description{
-    margin: 15px;
-}
-
-#park-amenities-list ul li{
-    margin-left: 20px;
-}
-
-/* .park-description p{
-    border-left: 5px solid blue;
-} */
 
 
 
@@ -342,7 +348,7 @@ color: var(--ink);
     /* Inspired by https://www.youtube.com/watch?v=JYfiaSKeYhE */
     /* to make the grid for desktop for the park pages */
     .information{
-        grid-template-columns: 55% 40%;
+        grid-template-columns: 50% 50%;
         row-gap: 25px;
         column-gap: 50px;
         margin-top: 50px;
