@@ -47,9 +47,16 @@
   font-size: 17px;
   display: block;
 }
+.topnav span {
+  color: var(--parchment);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
 
 /* Style the hamburger menu */
-.topnav a.icon {
+.topnav span.icon {
   background: var(--ink);
   color: var(--parchment);
   display: block;
