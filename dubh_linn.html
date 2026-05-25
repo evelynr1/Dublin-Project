@@ -44,8 +44,9 @@
             <a class="navLink settings" href="site_settings.html">Site Settings</a>
         </div>
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-        <a href="javascript:void(0);" class="icon" onclick="mobileNavMenu()">
-            <i class="fa fa-bars"></i>
+        <a href="javascript:void(0);" class="icon" aria-label="Open navigation menu" onclick="mobileNavMenu()">
+            <!-- hiding the aria label here prevents a screenreader from reading "icon". Instead it will skip this <i> tag -->
+            <i aria-hidden = "true" class="fa fa-bars"></i>
         </a>
     </nav>
 
