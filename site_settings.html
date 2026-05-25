@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Settings</title>
 
+    <!-- lightbox 2 -->
+    <link href="dist/css/lightbox.css" rel="stylesheet">
+
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -58,19 +61,38 @@
             Site Settings
         </h1>
     </header>
-    <main>
+    <main id="main">
         <h2>Accessibility Means Having Options</h2>
         <p>Accessibility is not a one size fits all approach. As such, I want this website to be adaptable to various needs. Feel free to play around with the settings on this page to learn more about them.</p>
         <div>
-            <h3>Select text size</h3>
-            <div class="text-size-buttons"></div>
+            <div class="settings-option">
+                <p id="container" class="container">This setting can be used by users who prefer bigger (or smaller) text without zooming in the entire site. So, the images will remain the same size while just the text changes.</p>
+                    <h3>Select text size</h3>
 
-            <h3>Select black-and-white or color</h3>
-            <!-- button code from https://dev.to/whitep4nth3r/the-best-lightdark-mode-theme-toggle-in-javascript-368f -->
-            <button id="light-dark-settings-button" class="light-dark-button" type="button" data-theme-toggle aria-label="Change to light theme">Change to light theme</button>
+                <!-- This next div comes from https://www.geeksforgeeks.org/javascript/allow-users-to-change-font-size-of-a-webpage-using-javascript  -->
+                <div class="text-size-buttons">
+                    <button type="button" name="btn1"
+                        onclick="changeSizeByBtn('8px')">-A</button>
+                    <button type="button" name="btn2"
+                        onclick="changeSizeByBtn('16px')">A</button>
+                    <button type="button" name="btn3"
+                        onclick="changeSizeByBtn('32px')">A+</button>
+                    <input type="range" min="10" max="30" id="slider" value="16" onchange="changeSizeBySlider()" aria-label="change text size">
+                </div>
+                
+            </div>
 
-            <h3>Hide all images on the site</h3>
-            <button id="image-visibility-button">Hide Images</button>
+            <div class="settings-option">
+                <h3>Light or dark mode</h3>
+                <p>This setting will match the default setting of the user's computer unless they use the button below to alter the color theme of this site. </p>
+                <!-- button code from https://dev.to/whitep4nth3r/the-best-lightdark-mode-theme-toggle-in-javascript-368f -->
+                <button id="light-dark-settings-button" class="light-dark-button" type="button" data-theme-toggle aria-label="Change to light theme">Change to light theme</button>
+            </div>
+
+            <div class="settings-option">
+                <h3>Hide all images on the site</h3>
+                <button id="image-visibility-button">Hide Images</button>
+            </div>
 
         </div>
 
@@ -106,6 +128,7 @@
     <!-- the following line of code is from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
     <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="material-icons">arrow_upward</span></button>
 
+    <script src="dist/js/lightbox-plus-jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src = "js/ai.js"></script>
     <script src = "js/script.js"></script>

@@ -10,6 +10,18 @@ function mobileNavMenu() {
   }
 }
 
+//code from Geeks for Geeks to change text size
+let cont = document.getElementById("container");
+function changeSizeByBtn(size) {
+    // Set value of the parameter as fontSize
+    cont.style.fontSize = size;
+}
+function changeSizeBySlider() {
+    let slider = document.getElementById("slider");
+    // Set slider value as fontSize
+    cont.style.fontSize = slider.value + "px";
+}
+
 // code for scrool to top button from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
 // Get the button:
 let mybutton = document.getElementById("myBtn");
@@ -40,16 +52,16 @@ function topFunction() {
 */
 function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
   if (localStorageTheme !== null) {
-    console.log("not null" + localStorageTheme)
+    // console.log("not null: " + localStorageTheme)
     return localStorageTheme;
   }
 
   if (systemSettingDark.matches) {
-    console.log("dark")
+    // console.log("dark")
     return "dark";
   }
 
-  console.log('light')
+  // console.log('light')
   return "light";
 }
 

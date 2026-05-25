@@ -180,6 +180,7 @@ h2{
     font-weight: bold;
     font-size: 1.5rem;
     line-height: 2;
+    text-align: center;
 }
 
 h3{
@@ -187,6 +188,14 @@ h3{
     font-size: 1.25rem;
     line-height: 1.75rem;
     font-family: "Signika", sans-serif;
+}
+
+.settings-option h3{
+    line-height: 2.25rem;
+}
+
+.settings-option{
+    padding: 10px 0px;
 }
 
 p{
@@ -308,9 +317,28 @@ color: var(--ink);
     color: var(--parchment);
 }
 
+/* skip to main content */
+.skip-link:focus, .skip-link:hover{
+    /* transform: translateY(0); */
+    top: 10px;
+    left: 25%;
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+    width: 50%;
+    z-index:100;
+    background: var(--parchment);
+    color: var(--accent1);
+    font-size: 24px;
+    text-align: center;
+    }
+
 /* media queries */
 /* tablet size */
 @media screen and (min-width: 700px){
+    h2{
+        text-align: left;
+    }
+    
     /* Inspired by https://www.youtube.com/watch?v=JYfiaSKeYhE */
     /* to make the grid for desktop for the park pages */
     .information{
@@ -365,26 +393,6 @@ color: var(--ink);
     /* .topnav .settings{
         justify-content: right;
     } */
-
-    
-
-
-
-    /* skip to main content */ 
-    /* move back to desktop */
-    .skip-link:focus, .skip-link:hover{
-        /* transform: translateY(0); */
-        top: 10px;
-        left: 25%;
-        outline: 3px solid var(--focus);
-        outline-offset: 3px;
-        width: 50%;
-        z-index:100;
-        background: var(--parchment);
-        color: var(--accent1);
-        font-size: 24px;
-        text-align: center;
-        }
 
 }
 
