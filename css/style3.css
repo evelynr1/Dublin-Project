@@ -238,16 +238,27 @@ p{
     margin: auto;
 }
 
+
+
+/* keep the background green and the next and previous arrows parchment (off-white) regardless of light or dark mode because I think it looks better */
 .carousel-control-next, .carousel-control-prev {
   color: var(--parchment);
   background-color: var(--ink);
 }
 
+[data-theme="dark"] .carousel-control-next, [data-theme="dark"] .carousel-control-prev {
+  color: var(--ink);
+  background-color: var(--parchment);
+}
+
+/* [data-theme="dark"] .carousel-control-next {
+  color: var(--ink);
+  background-color: var(--parchment);
+} */
+
 .prev{
     background-color: var(--accent1);
 }
-
-
 
 /* .accessibility-info p{
     margin: 0px 0px 0px 30px;

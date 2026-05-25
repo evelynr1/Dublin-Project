@@ -1,3 +1,24 @@
+:root{
+  /* fixing lightbox2 contrast errors with text in caption and album label */
+  /* looked at the "Theming" section of this site: https://lokeshdhakar.com/projects/lightbox2/ */
+  --lb-overlay-bg: var(--parchment);
+  /* --lb-overlay-opacity: 0.8; */
+  --lb-text-color: var(--ink);
+  --lb-number-color: var(--ink);
+
+
+}
+
+/* modified the focus indicator to make it more clearly visible */
+/* https://www.w3.org/WAI/WCAG21/Techniques/css/C40 */
+*:focus{
+  /* inner indicator */
+	outline: 2px var(--parchment) solid;
+	outline-offset: 0;
+	/* outer indicator */
+	box-shadow: 0 0 0 4px #193146;
+}
+
 /* for carousel from https://codingyaar.com/bootstrap-carousel-slider-with-thumbnails/ */
 .carousel-indicators {
     position: static;
@@ -176,3 +197,5 @@ main {
 }
 
 /*  */
+
+
