@@ -2,14 +2,14 @@
 
 
 
-//color to dark mode
-let darkBtn = document.querySelector("#dark-mode-button");
+// //color to dark mode
+// let darkBtn = document.querySelector("#dark-mode-button");
 
-darkBtn.addEventListener('click', function() {
-    var x = document.body;
-    x.classList.toggle("dark-mode");
-    this.innerHTML = "Light Mode";
-});
+// darkBtn.addEventListener('click', function() {
+//     var x = document.body;
+//     x.classList.toggle("dark-mode");
+//     this.innerHTML = "Light Mode";
+// });
 
 //hide images button
 //with minor help from this code: https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp

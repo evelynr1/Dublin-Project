@@ -24,11 +24,17 @@
     --links: #fcfaf8;
 }
 
+.light-dark-button{
+    display:none;
+}
+#light-dark-settings-button{
+    display: block;
+}
 
-.dark-mode{
+/* .dark-mode{
     background-color: var(--ink);
     color: var(--parchment);
-}
+} */
 
 *{
     box-sizing: border-box;
@@ -106,7 +112,7 @@ header{
 }
 
 main{
-    padding: 0px 5px 0px;
+    padding: 0px 20px 0px;
 }
 
 footer{
@@ -124,19 +130,12 @@ section ul li{
 
 .information{
     display: grid;
-    grid-template-columns: 90%;
+    grid-template-columns: 100%;
     grid-template-rows: auto auto;;
     width: 90%;
     margin: auto;
     justify-content: center;
 }
-
-/* .information section .section-content{
-    width: 90%;
-    border-left: 3px solid var(--accent2);
-    margin: 10px;
-    padding: 5px;
-} */
 
 .introduction-grid1{
     display: grid;
@@ -256,6 +255,10 @@ color: var(--ink);
 
 .park-description{
     margin: 15px;
+}
+
+#park-amenities-list ul li{
+    margin-left: 20px;
 }
 
 /* .park-description p{

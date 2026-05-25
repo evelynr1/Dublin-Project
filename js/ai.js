@@ -40,13 +40,16 @@ function topFunction() {
 */
 function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
   if (localStorageTheme !== null) {
+    console.log("not null" + localStorageTheme)
     return localStorageTheme;
   }
 
   if (systemSettingDark.matches) {
+    console.log("dark")
     return "dark";
   }
 
+  console.log('light')
   return "light";
 }
 
@@ -57,7 +60,7 @@ function updateButton({ buttonEl, isDark }) {
   const newCta = isDark ? "Change to light theme" : "Change to dark theme";
   // use an aria-label if you are omitting text on the button
   // and using a sun/moon icon, for example
-  buttonEl.setAttribute("aria-label", newCta);
+  // buttonEl.setAttribute("aria-label", newCta);
   buttonEl.innerText = newCta;
 }
 
