@@ -92,12 +92,17 @@ a:hover, a:focus{
 } */
 
 /* with help from Olivia Lombardo        */
-nav a:hover, nav a:focus-visible, nav a:focus, #homepage:hover, #homepage:focus-visible {
+nav a:hover, nav a:focus-visible, nav a:focus, #homepage:hover, #homepage:focus-visible, #five-parks a:hover, #five-parks a:focus-visible {
     /* color: var(--ink);
     background-color: var(--parchment);
     outline: 2px dashed var(--accent2); */
     outline: 2px dashed var(--parchment);
     color: var(--parchment);
+}
+
+#photo-gallery a:hover, #photo-gallery a:focus-visible {
+    outline: 2px dashed var(--ink);
+    color: var(--ink);
 }
 
 /* #homepage:hover, #homepage:focus-visible{
