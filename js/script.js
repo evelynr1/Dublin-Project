@@ -28,4 +28,3 @@ imgBtn.addEventListener('click', function() {
     });
 });
 
-//

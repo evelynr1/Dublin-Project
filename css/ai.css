@@ -196,6 +196,26 @@ main {
   height: 4rem;            /* Footer height */
 }
 
-/*  */
-
+/* Print media query */
+/* with help from the lecture 2 code */
+@media print{
+  nav, .back-to-top {
+      display: none;
+  }
+  body {
+      font-size: 12pt;
+      color: #000000;
+      background: #ffffff;
+  }
+  a[href]::after { 
+    content: " (" attr(href) ")"; 
+    font-size: 90%; 
+  }
+  h1, h2, h3 { 
+    page-break-after: avoid; 
+  }
+  img{ 
+    max-width: 100% 
+  }
+}
 
