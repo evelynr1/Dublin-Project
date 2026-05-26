@@ -199,13 +199,8 @@ main {
 /* Print media query */
 /* with help from the lecture 2 code */
 @media print{
-  nav, .back-to-top {
+  nav, .back-to-top, .carousel-indicators, .carousel-control-prev, .carousel-control-next {
       display: none;
-  }
-  body {
-      font-size: 12pt;
-      color: #000000;
-      background: #ffffff;
   }
   a[href]::after { 
     content: " (" attr(href) ")"; 
