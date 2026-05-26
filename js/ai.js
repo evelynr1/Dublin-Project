@@ -11,6 +11,7 @@ function mobileNavMenu() {
 }
 
 //code from Geeks for Geeks to change text size
+//https://www.geeksforgeeks.org/javascript/allow-users-to-change-font-size-of-a-webpage-using-javascript/
 let cont = document.getElementById("container");
 function changeSizeByBtn(size) {
     // Set value of the parameter as fontSize
