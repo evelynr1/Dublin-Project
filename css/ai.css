@@ -86,11 +86,11 @@
   top: 0;
 }
 
-/* Add a grey background color on mouse-over */
+/* Add a grey background color on mouse-over
 .topnav a:hover {
   background-color: var(--accent3);
   color: var(--ink);
-}
+} */
 
 /* Style the active link (or home/logo) */
 .active {

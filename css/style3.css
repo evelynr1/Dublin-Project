@@ -67,6 +67,7 @@ nav{
     font-family: "Signika", sans-serif;
     position: sticky;
     top: 0;
+    padding: 5px;
 }
 
 nav ul{
@@ -91,17 +92,19 @@ a:hover, a:focus{
 } */
 
 /* with help from Olivia Lombardo        */
-nav a:hover, nav a:focus-visible {
-    color: var(--ink);
+nav a:hover, nav a:focus-visible, nav a:focus, #homepage:hover, #homepage:focus-visible {
+    /* color: var(--ink);
     background-color: var(--parchment);
-    outline: 2px dashed var(--accent2);
+    outline: 2px dashed var(--accent2); */
+    outline: 2px dashed var(--parchment);
+    color: var(--parchment);
 }
 
-#homepage:hover, #homepage:focus-visible{
+/* #homepage:hover, #homepage:focus-visible{
     color: var(--accent2);
     background-color: var(--parchment);
     outline: 2px dashed var(--accent2);
-}
+} */
 
 .active{
     background-color: var(--accent1);
@@ -367,8 +370,6 @@ color: var(--ink);
         text-align: left;
     }
     
-    /* Inspired by https://www.youtube.com/watch?v=JYfiaSKeYhE */
-    /* to make the grid for desktop for the park pages */
     .information{
         grid-template-columns: 50% 50%;
         row-gap: 25px;
@@ -435,6 +436,10 @@ color: var(--ink);
         grid-template-columns: 30% 30% 30%;
         row-gap: 50px;
         margin: 0px 0px 25px;
+    }
+
+    .carousel{
+        width: 60%;
     }
 
     
